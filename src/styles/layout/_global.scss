@@ -1,0 +1,14 @@
+@import 'body';
+@import 'footer';
+@import 'header';
+@import 'mobile';
+
+@media (min-width: 768px) {
+  .mobile-content {
+    display: none;
+  }
+
+  .desktop-content {
+    display: block;
+  }
+}
