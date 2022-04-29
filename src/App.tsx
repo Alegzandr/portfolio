@@ -16,20 +16,20 @@ function App() {
 
   i18n.on('languageChanged', (lng) => {document.documentElement.setAttribute('lang', lng);})
 
-  const [active, setActive] = useState(false);
+  const [open, setOpen] = useState(false);
 
   const toggleClass = () => {
-    setActive(!active);
+    setOpen(!open);
   };
 
   return (
     <div>
-      <button className={`btn btn-menu ${active ? '' : 'active'}`} onClick={toggleClass}>
+      <button className={`btn btn-menu ${open ? '' : 'open'}`} onClick={toggleClass}>
         <i className="fas fa-bars"></i>
       </button>
 
-      <nav className={active ? 'active' : ''}>
-        <button className={`btn btn-exit ${active ? 'active' : ''}`} onClick={toggleClass}>
+      <nav className={open ? 'open' : ''}>
+        <button className={`btn btn-exit ${open ? 'open' : ''}`} onClick={toggleClass}>
           <i className="fas fa-xmark"></i>
         </button>
 

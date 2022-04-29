@@ -1,4 +1,4 @@
-.active {
+.open {
   display: block !important;
 }
 
@@ -31,6 +31,21 @@ nav {
     img {
       width: 100%;
     }
+  }
+
+  li:not(:last-child) {
+    position: relative;
+    z-index: 1;
+  }
+
+  li:not(:first-child):not(:last-child)::before {
+    content: "";
+    position: absolute;
+    left: 45%;
+    bottom: 0;
+    height: 1px;
+    width: 10%;
+    border-bottom: 1px solid $font-primary;
   }
 
   li:nth-child(2) {
