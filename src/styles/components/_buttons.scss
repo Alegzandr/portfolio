@@ -1,0 +1,21 @@
+.btn {
+  background: none !important;
+  border: none;
+  padding: 20px !important;
+  cursor: pointer;
+  color: $font-primary;
+  font-size: 30px;
+  position: absolute;
+  width: 70px;
+  height: 70px;
+}
+
+.btn-menu {
+  right: 0;
+  display: none;
+}
+
+.btn-exit {
+  right: 0;
+  display: none;
+}

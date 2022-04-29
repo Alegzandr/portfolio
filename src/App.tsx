@@ -1,4 +1,4 @@
-import React from 'react';
+import { useState } from 'react';
 import { Routes, Route, Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import './styles/main.scss';
@@ -14,31 +14,56 @@ function App() {
     i18n.changeLanguage(lng);
   };
 
-  i18n.on('languageChanged', (lng) => { document.documentElement.setAttribute('lang', lng); })
+  i18n.on('languageChanged', (lng) => {document.documentElement.setAttribute('lang', lng);})
+
+  const [active, setActive] = useState(false);
+
+  const toggleClass = () => {
+    setActive(!active);
+  };
 
   return (
     <div>
-      <nav>
+      <button className={`btn btn-menu ${active ? '' : 'active'}`} onClick={toggleClass}>
+        <i className="fas fa-bars"></i>
+      </button>
+
+      <nav className={active ? 'active' : ''}>
+        <button className={`btn btn-exit ${active ? 'active' : ''}`} onClick={toggleClass}>
+          <i className="fas fa-xmark"></i>
+        </button>
+
         <ul>
-          <li><Link to="/">Home</Link></li>
-          <li><Link to="/">{t('about')}</Link></li>
-          <li><Link to="/">{t('skills')}</Link></li>
-          <li><Link to="/">{t('contact')}</Link></li>
           <li>
-            <a href="https://www.linkedin.com/in/alexandrefarrenq/" target="_blank" rel="noreferrer">
-              <i className="fab fa-linkedin-in"></i>
-            </a>
-            <a href="https://github.com/Alegzandr" target="_blank" rel="noreferrer">
-              <i className="fab fa-github"></i>
-            </a>
+            <Link to="/">
+              <img src="/img/logo.jpg" className="desktop-content" alt="Alexandre Farrenq" />
+              <img src="/img/logo-mobile.jpg" className="mobile-content" alt="Alexandre Farrenq" />
+            </Link>
+          </li>
+          <li><Link to="/about">{t('about')}</Link></li>
+          <li><Link to="/skills">{t('skills')}</Link></li>
+          <li><Link to="/contact">{t('contact')}</Link></li>
+          <li>
+            <ul className="socials">
+              <li>
+                <a href="https://www.linkedin.com/in/alexandrefarrenq/" target="_blank" rel="noreferrer">
+                  <i className="fab fa-linkedin-in"></i>
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/Alegzandr" target="_blank" rel="noreferrer">
+                  <i className="fab fa-github"></i>
+                </a>
+              </li>
+            </ul>
           </li>
         </ul>
 
         <div className="language">
-          <button type="button" onClick={ () => changeLanguage('en') }>
+          <button type="button" onClick={() => changeLanguage('en')}>
             en
           </button>
-          <button type="button" onClick={ () => changeLanguage('fr') }>
+          <button type="button" onClick={() => changeLanguage('fr')}>
             fr
           </button>
         </div>

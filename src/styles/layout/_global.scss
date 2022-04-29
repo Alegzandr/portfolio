@@ -1,13 +1,3 @@
 @import 'body';
 @import 'nav';
-@import 'mobile';
-
-@media (min-width: 768px) {
-  .mobile-content {
-    display: none;
-  }
-
-  .desktop-content {
-    display: block;
-  }
-}
+@import 'responsive';

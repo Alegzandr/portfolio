@@ -1,4 +1,16 @@
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-family: 'Roboto', sans-serif;
+  color: $font-primary;
+}
+
+// Links
+a {
+  color: $font-primary;
+  text-decoration: none;
+}
+
+a:hover {
+  color: $font-primary;
 }
