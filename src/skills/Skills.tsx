@@ -2,7 +2,7 @@ import { useTranslation } from 'react-i18next';
 
 function Skills() {
   return(
-    <div></div>
+    <div className="skills"></div>
   );
 }
 

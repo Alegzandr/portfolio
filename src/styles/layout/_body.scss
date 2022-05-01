@@ -1,12 +1,59 @@
 body {
+  @include background-size(cover);
   background: $body-bg;
-}
-
-main {
-  padding: 10vh 5vw 0 5vw;
-  width: 90vw;
+  @include linear-gradient($body-gradient);
+  overflow: hidden;
 }
 
 .hide {
   display: none !important;
+}
+
+#root>div {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.sidebar-left {
+  width: 10vw;
+}
+
+main {
+  width: 85vw;
+}
+
+.sidebar-right {
+  width: 15vw;
+}
+
+footer {
+  width: 100vw;
+  height: 15vh;
+}
+
+aside, main {
+  height: 100vh;
+}
+
+.sidebar-left, footer {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .sidebar-left, footer {
+    display: block;
+  }
+
+  main {
+    width: 80vw;
+  }
+
+  .sidebar-right {
+    width: 10vw;
+  }
+
+  aside, main {
+    height: 85vh;
+  }
 }

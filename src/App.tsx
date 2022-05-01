@@ -16,6 +16,7 @@ function App() {
 
   i18n.on('languageChanged', (lng) => {document.documentElement.setAttribute('lang', lng);})
 
+  // Menu
   const [open, setOpen] = useState(false);
 
   const toggleClass = () => {
@@ -24,52 +25,11 @@ function App() {
 
   return (
     <div>
-      <button className="btn btn-menu" onClick={toggleClass}>
-        <i className={`fas ${open ? 'fa-xmark' : 'fa-bars'}`}></i>
-      </button>
-
-      <nav className={open ? 'open' : 'close'}>
-        <ul>
-          <li>
-            <NavLink to="/">
-              <img src="/img/logo.jpg" className="desktop-content" alt="Alexandre Farrenq" />
-              <img src="/img/logo-mobile.jpg" className="mobile-content" alt="Alexandre Farrenq" />
-            </NavLink>
-          </li>
-          <li>
-            <NavLink to="/about" className={({ isActive }) => isActive ? 'active' : ''}>{t('about')}</NavLink>
-          </li>
-          <li>
-            <NavLink to="/skills" className={({ isActive }) => isActive ? 'active' : ''}>{t('skills')}</NavLink>
-          </li>
-          <li>
-            <NavLink to="/contact" className={({ isActive }) => isActive ? 'active' : ''}>{t('contact')}</NavLink>
-          </li>
-          <li>
-            <ul className="socials">
-              <li>
-                <a href="https://www.NavLinkedin.com/in/alexandrefarrenq/" target="_blank" rel="noreferrer">
-                  <i className="fab fa-linkedin-in"></i>
-                </a>
-              </li>
-              <li>
-                <a href="https://github.com/Alegzandr" target="_blank" rel="noreferrer">
-                  <i className="fab fa-github"></i>
-                </a>
-              </li>
-            </ul>
-          </li>
-        </ul>
-
-        <div className="language">
-          <button type="button" onClick={() => changeLanguage('en')}>
-            en
-          </button>
-          <button type="button" onClick={() => changeLanguage('fr')}>
-            fr
-          </button>
-        </div>
-      </nav>
+      <aside className="sidebar-left">
+        <NavLink to="/">
+          <img src="/img/logo.png" alt="Alexandre Farrenq" />
+        </NavLink>
+      </aside>
 
       <main className={open ? 'hide' : ''}>
         <Routes>
@@ -79,6 +39,74 @@ function App() {
           <Route path="/" element={<Home />} />
         </Routes>
       </main>
+
+      <aside className="sidebar-right">
+        <button className={`btn btn-menu ${open ? 'btn-exit' : ''}`} onClick={toggleClass}>
+          <i className={`fas ${open ? 'fa-xmark' : 'fa-bars'}`}></i>
+        </button>
+
+        <nav className={open ? 'open' : 'close'}>
+          <div className="navigation">
+            <ul>
+              <li>
+                <NavLink to="/">
+                <img src="/img/logo.png" alt="Alexandre Farrenq" />
+                </NavLink>
+              </li>
+              <li>
+                <NavLink to="/about" className={({ isActive }) => isActive ? 'active' : ''}>{t('about')}</NavLink>
+              </li>
+              <li>
+                <NavLink to="/skills" className={({ isActive }) => isActive ? 'active' : ''}>{t('skills')}</NavLink>
+              </li>
+              <li>
+                <NavLink to="/contact" className={({ isActive }) => isActive ? 'active' : ''}>{t('contact')}</NavLink>
+              </li>
+            </ul>
+          </div>
+
+          <div className="languages bottom">
+            <button type="button" onClick={() => changeLanguage('en')}>
+              en
+            </button>
+            <button type="button" onClick={() => changeLanguage('fr')}>
+              fr
+            </button>
+          </div>
+
+          <div className="socials bottom">
+            <ul>
+              <li>
+                <a href="https://www.linkedin.com/in/alexandrefarrenq/" target="_blank" rel="noreferrer">
+                  <i className="fab fa-linkedin-in"></i>
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/Alegzandr" target="_blank" rel="noreferrer">
+                  <i className="fab fa-github"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </aside>
+
+      <footer>
+        <div>
+          <a href="https://www.linkedin.com/in/alexandrefarrenq/" target="_blank" rel="noreferrer">LinkedIn</a>
+          <a href="https://github.com/Alegzandr" target="_blank" rel="noreferrer">Github</a>
+        </div>
+
+        <div>
+          <button className="btn btn-previous">
+            <i className="fas fa-up-long"></i>
+          </button>
+
+          <button className="btn btn-next">
+            <i className="fas fa-down-long"></i>
+          </button>
+        </div>
+      </footer>
     </div>
   );
 }
