@@ -1,3 +1,12 @@
 body {
   background: $body-bg;
 }
+
+main {
+  padding: 10vh 5vw 0 5vw;
+  width: 90vw;
+}
+
+.hide {
+  display: none !important;
+}

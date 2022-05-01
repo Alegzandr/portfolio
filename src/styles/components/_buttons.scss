@@ -6,6 +6,7 @@
   color: $font-primary;
   font-size: 30px;
   position: absolute;
+  z-index: 999;
   width: 70px;
   height: 70px;
 }
@@ -13,11 +14,4 @@
 .btn-menu {
   top: 0;
   right: 0;
-  display: none;
-}
-
-.btn-exit {
-  right: 0;
-  display: none;
-  z-index: 999;
 }

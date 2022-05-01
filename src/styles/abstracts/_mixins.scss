@@ -46,32 +46,6 @@
   -webkit-transform-origin: $value;
   transform-origin: $value;
 }
-@mixin animation($name, $duration, $timing, $type){
-  -o-animation: $name $duration $timing $type;
-  -moz-animation: $name $duration $timing $type;
-  -webkit-animation: $name $duration $timing $type;
-  animation: $name $duration $timing $type;
-}
-@mixin animation-delay($value){
-  -o-animation: $value;
-  -moz-animation: $value;
-  -webkit-animation: $value;
-  animation: $value;
-}
-@mixin keyframes($value) {
-  @-webkit-keyframes #{$value} {
-    @content;
-  }
-  @-moz-keyframes #{$value} {
-    @content;
-  }
-  @-o-keyframes #{$value} {
-    @content;
-  }
-  @keyframes #{$value} {
-    @content;
-  }
-}
 
 // Filters
 @mixin filter($value){

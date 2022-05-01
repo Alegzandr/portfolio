@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Routes, Route, Link } from 'react-router-dom';
+import { Routes, Route, NavLink } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import './styles/main.scss';
 import Home from './home/Home';
@@ -24,30 +24,32 @@ function App() {
 
   return (
     <div>
-      <button className={`btn btn-menu ${open ? '' : 'open'}`} onClick={toggleClass}>
-        <i className="fas fa-bars"></i>
+      <button className="btn btn-menu" onClick={toggleClass}>
+        <i className={`fas ${open ? 'fa-xmark' : 'fa-bars'}`}></i>
       </button>
 
-      <nav className={open ? 'open' : ''}>
-        <button className={`btn btn-exit ${open ? 'open' : ''}`} onClick={toggleClass}>
-          <i className="fas fa-xmark"></i>
-        </button>
-
+      <nav className={open ? 'open' : 'close'}>
         <ul>
           <li>
-            <Link to="/">
+            <NavLink to="/">
               <img src="/img/logo.jpg" className="desktop-content" alt="Alexandre Farrenq" />
               <img src="/img/logo-mobile.jpg" className="mobile-content" alt="Alexandre Farrenq" />
-            </Link>
+            </NavLink>
           </li>
-          <li><Link to="/about">{t('about')}</Link></li>
-          <li><Link to="/skills">{t('skills')}</Link></li>
-          <li><Link to="/contact">{t('contact')}</Link></li>
+          <li>
+            <NavLink to="/about" className={({ isActive }) => isActive ? 'active' : ''}>{t('about')}</NavLink>
+          </li>
+          <li>
+            <NavLink to="/skills" className={({ isActive }) => isActive ? 'active' : ''}>{t('skills')}</NavLink>
+          </li>
+          <li>
+            <NavLink to="/contact" className={({ isActive }) => isActive ? 'active' : ''}>{t('contact')}</NavLink>
+          </li>
           <li>
             <ul className="socials">
               <li>
-                <a href="https://www.linkedin.com/in/alexandrefarrenq/" target="_blank" rel="noreferrer">
-                  <i className="fab fa-linkedin-in"></i>
+                <a href="https://www.NavLinkedin.com/in/alexandrefarrenq/" target="_blank" rel="noreferrer">
+                  <i className="fab fa-NavLinkedin-in"></i>
                 </a>
               </li>
               <li>
@@ -69,7 +71,7 @@ function App() {
         </div>
       </nav>
 
-      <main>
+      <main className={open ? 'hide' : ''}>
         <Routes>
           <Route path="/contact" element={<Contact />} />
           <Route path="/skills" element={<Skills />} />

@@ -1,0 +1,9 @@
+nav.open {
+  animation: slideInDown;
+  animation-duration: 0.5s;
+}
+
+nav.close {
+  animation: slideInUp;
+  animation-duration: 0.5s;
+}
