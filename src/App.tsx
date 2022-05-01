@@ -25,7 +25,7 @@ function App() {
 
   return (
     <div>
-      <aside className="sidebar-left">
+      <aside className={`sidebar-left ${open ? 'hide' : ''}`}>
         <NavLink to="/">
           <img src="/img/logo.png" alt="Alexandre Farrenq" />
         </NavLink>
@@ -45,7 +45,7 @@ function App() {
           <i className={`fas ${open ? 'fa-xmark' : 'fa-bars'}`}></i>
         </button>
 
-        <nav className={open ? 'open' : 'close'}>
+        <nav className={open ? 'open' : ''}>
           <div className="navigation">
             <ul>
               <li>
@@ -91,7 +91,7 @@ function App() {
         </nav>
       </aside>
 
-      <footer>
+      <footer className={open ? 'hide' : ''}>
         <div>
           <a href="https://www.linkedin.com/in/alexandrefarrenq/" target="_blank" rel="noreferrer">LinkedIn</a>
           <a href="https://github.com/Alegzandr" target="_blank" rel="noreferrer">Github</a>

@@ -7,11 +7,6 @@ body {
   color: $font-primary;
 }
 
-nav a {
-  font-size: 1.6em;
-  color: $font-dark;
-}
-
 // Links
 a {
   color: $font-primary;
@@ -20,4 +15,16 @@ a {
 
 a:hover {
   color: $font-primary;
+}
+
+// Navigation
+nav a {
+  font-size: 1.6em;
+  color: $font-dark;
+  text-transform: lowercase;
+}
+
+// Footer
+footer a {
+  text-transform: lowercase;
 }
