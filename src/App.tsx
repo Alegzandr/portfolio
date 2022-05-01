@@ -49,7 +49,7 @@ function App() {
             <ul className="socials">
               <li>
                 <a href="https://www.NavLinkedin.com/in/alexandrefarrenq/" target="_blank" rel="noreferrer">
-                  <i className="fab fa-NavLinkedin-in"></i>
+                  <i className="fab fa-linkedin-in"></i>
                 </a>
               </li>
               <li>
