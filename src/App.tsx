@@ -99,7 +99,7 @@ function App() {
           </div>
         </nav>
 
-        <div className="shape">
+        <div className={`shape ${open ? 'hide' : ''}`}>
           <div className="line"></div>
           <div className="line"></div>
         </div>
