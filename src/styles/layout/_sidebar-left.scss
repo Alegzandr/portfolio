@@ -1,5 +1,33 @@
 .sidebar-left {
   img {
-    width: 100%;
+    height: 6vh;
+    padding: 2vh 20%;
+  }
+
+  .shape {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+  }
+
+  .line {
+    border-left: 2px solid $font-dark;
+    height: 16vh;
+  }
+
+  .circle {
+    border: 2px solid $font-dark;
+    height: 5vh;
+    width: 5vh;
+    border-radius: 50%;
+    line-height: 5vh;
+    text-align: center;
+  }
+
+  .circle, .line:not(:first-child) {
+    margin-top: 5vh;
   }
 }

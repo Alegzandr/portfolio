@@ -30,6 +30,9 @@ main {
 footer {
   width: 100vw;
   height: 15vh;
+  position: absolute;
+  bottom: 0;
+  left: 0;
 }
 
 aside, main {
@@ -51,9 +54,5 @@ aside, main {
 
   .sidebar-right {
     width: 10vw;
-  }
-
-  aside, main {
-    height: 85vh;
   }
 }

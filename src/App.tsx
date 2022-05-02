@@ -29,6 +29,12 @@ function App() {
         <NavLink to="/">
           <img src="/img/logo.png" alt="Alexandre Farrenq" />
         </NavLink>
+
+        <div className="shape">
+          <div className="line"></div>
+          <div className="circle">01</div>
+          <div className="line"></div>
+        </div>
       </aside>
 
       <main className={open ? 'hide' : ''}>
@@ -52,6 +58,9 @@ function App() {
                 <NavLink to="/">
                 <img src="/img/logo.png" alt="Alexandre Farrenq" />
                 </NavLink>
+              </li>
+              <li>
+                <NavLink to="/" className={({ isActive }) => isActive ? 'active' : ''}>{t('home')}</NavLink>
               </li>
               <li>
                 <NavLink to="/about" className={({ isActive }) => isActive ? 'active' : ''}>{t('about')}</NavLink>
@@ -89,13 +98,22 @@ function App() {
             </ul>
           </div>
         </nav>
+
+        <div className="shape">
+          <div className="line"></div>
+          <div className="line"></div>
+        </div>
       </aside>
 
       <footer className={open ? 'hide' : ''}>
-        <div>
-          <a href="https://www.linkedin.com/in/alexandrefarrenq/" target="_blank" rel="noreferrer">LinkedIn</a>
-          <a href="https://github.com/Alegzandr" target="_blank" rel="noreferrer">Github</a>
-        </div>
+        <ul>
+          <li>
+            <a href="https://www.linkedin.com/in/alexandrefarrenq/" target="_blank" rel="noreferrer">LinkedIn</a>
+          </li>
+          <li>
+            <a href="https://github.com/Alegzandr" target="_blank" rel="noreferrer">GitHub</a>
+          </li>
+        </ul>
 
         <div>
           <button className="btn btn-previous">

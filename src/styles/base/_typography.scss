@@ -17,6 +17,10 @@ a:hover {
   color: $font-primary;
 }
 
+a.active {
+  color: $font-active;
+}
+
 // Navigation
 nav a {
   font-size: 1.6em;
@@ -26,5 +30,6 @@ nav a {
 
 // Footer
 footer a {
+  color: $font-dark;
   text-transform: lowercase;
 }
