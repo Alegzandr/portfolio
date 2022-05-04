@@ -14,7 +14,7 @@
 
 .btn-menu {
   top: 3vh;
-  right: 3vh;
+  right: 2vh;
 }
 
 .btn-exit {
@@ -23,10 +23,16 @@
 
 .btn-previous {
   bottom: 10vh;
-  right: 4vw;
+  right: 13vh;
 }
 
 .btn-next {
   bottom: 4vh;
-  right: 4vw;
+  right: 13vh;
+}
+
+@media (min-width: 768px) {
+  .btn-menu {
+    right: 13vh;
+  }
 }

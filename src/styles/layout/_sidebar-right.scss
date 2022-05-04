@@ -88,7 +88,7 @@
     height: 100vh;
 
     .line:first-child {
-      border-right: 2px solid $font-primary;
+      border-right: 1px solid $font-primary;
       height: 8vh;
       position: absolute;
     }
@@ -110,7 +110,7 @@
     }
 
     .line {
-      border-right: 2px solid $font-dark;
+      border-right: 1px solid $font-dark;
       height: 32vh;
     }
   }

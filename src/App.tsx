@@ -3,7 +3,7 @@ import { Routes, Route, NavLink, useLocation, Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import './styles/main.scss';
 import Home from './home/Home';
-import About from './about/About';
+import Experience from './experience/Experience';
 import Skills from './skills/Skills';
 import Contact from './contact/Contact';
 
@@ -26,7 +26,7 @@ function App() {
   // Current page number
   const [number, setNumber] = useState(1);
   const currentPath = useLocation().pathname;
-  const pages = ['/', '/about', '/skills', '/contact'];
+  const pages = ['/', '/experience', '/skills', '/contact'];
 
   useEffect(() => {
     for (let i = 0; i < pages.length; i++) {
@@ -71,7 +71,7 @@ function App() {
         <Routes>
           <Route path="/contact" element={<Contact />} />
           <Route path="/skills" element={<Skills />} />
-          <Route path="/about" element={<About />} />
+          <Route path="/experience" element={<Experience />} />
           <Route path="/" element={<Home />} />
         </Routes>
       </main>
@@ -93,7 +93,7 @@ function App() {
                 <NavLink to="/">{t('home')}</NavLink>
               </li>
               <li>
-                <NavLink to="/about">{t('about')}</NavLink>
+                <NavLink to="/about">{t('experience')}</NavLink>
               </li>
               <li>
                 <NavLink to="/skills">{t('skills')}</NavLink>

@@ -16,11 +16,13 @@ body {
 }
 
 .sidebar-left {
-  width: 10vw;
+  width: 20vw;
+  text-align: center;
 }
 
 main {
-  width: 85vw;
+  padding-left: 5vw;
+  width: 80vw;
 }
 
 .sidebar-right {
@@ -49,10 +51,10 @@ aside, main {
   }
 
   main {
-    width: 80vw;
+    width: 60vw;
   }
 
   .sidebar-right {
-    width: 10vw;
+    width: 20vw;
   }
 }

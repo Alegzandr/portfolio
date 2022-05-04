@@ -6,6 +6,9 @@ function Home() {
   return(
     <div className="home">
       <h3>{t('title')}</h3>
+      <p>
+        {t('about-me')}
+      </p>
     </div>
   );
 }
