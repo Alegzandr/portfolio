@@ -1,5 +1,5 @@
-import { useState } from 'react';
-import { Routes, Route, NavLink } from 'react-router-dom';
+import { useEffect, useState } from 'react';
+import { Routes, Route, NavLink, useLocation, Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import './styles/main.scss';
 import Home from './home/Home';
@@ -23,6 +23,36 @@ function App() {
     setOpen(!open);
   };
 
+  // Current page number
+  const [number, setNumber] = useState(1);
+  const currentPath = useLocation().pathname;
+  const pages = ['/', '/about', '/skills', '/contact'];
+
+  useEffect(() => {
+    for (let i = 0; i < pages.length; i++) {
+      if (pages[i] === currentPath)
+        setNumber(i + 1);
+    }
+  });
+
+  // Go to next page with buttons
+  const [previousPage, setPreviousPage] = useState('#');
+  const [nextPage, setNextPage] = useState('#');
+
+  useEffect(() => {
+    if (currentPath !== pages[0]) {
+      setPreviousPage(pages[pages.indexOf(currentPath) - 1]);
+    } else {
+      setPreviousPage('#');
+    }
+
+    if (currentPath !== pages[pages.length - 1]) {
+      setNextPage(pages[pages.indexOf(currentPath) + 1]);
+    } else {
+      setNextPage('#');
+    }
+  });
+
   return (
     <div>
       <aside className={`sidebar-left ${open ? 'hide' : ''}`}>
@@ -32,7 +62,7 @@ function App() {
 
         <div className="shape">
           <div className="line"></div>
-          <div className="circle">01</div>
+          <div className="circle">0{number}</div>
           <div className="line"></div>
         </div>
       </aside>
@@ -56,20 +86,20 @@ function App() {
             <ul>
               <li>
                 <NavLink to="/">
-                <img src="/img/logo.png" alt="Alexandre Farrenq" />
+                  <img src="/img/logo.png" alt="Alexandre Farrenq" />
                 </NavLink>
               </li>
               <li>
-                <NavLink to="/" className={({ isActive }) => isActive ? 'active' : ''}>{t('home')}</NavLink>
+                <NavLink to="/">{t('home')}</NavLink>
               </li>
               <li>
-                <NavLink to="/about" className={({ isActive }) => isActive ? 'active' : ''}>{t('about')}</NavLink>
+                <NavLink to="/about">{t('about')}</NavLink>
               </li>
               <li>
-                <NavLink to="/skills" className={({ isActive }) => isActive ? 'active' : ''}>{t('skills')}</NavLink>
+                <NavLink to="/skills">{t('skills')}</NavLink>
               </li>
               <li>
-                <NavLink to="/contact" className={({ isActive }) => isActive ? 'active' : ''}>{t('contact')}</NavLink>
+                <NavLink to="/contact">{t('contact')}</NavLink>
               </li>
             </ul>
           </div>
@@ -100,7 +130,7 @@ function App() {
         </nav>
 
         <div className={`shape ${open ? 'hide' : ''}`}>
-          <div className="line"></div>
+          <div className={`line line-${number}`}></div>
           <div className="line"></div>
         </div>
       </aside>
@@ -116,13 +146,17 @@ function App() {
         </ul>
 
         <div>
-          <button className="btn btn-previous">
-            <i className="fas fa-up-long"></i>
-          </button>
+          <Link to={previousPage} className={previousPage === '#' ? 'hide' : ''}>
+            <button className="btn btn-previous">
+              <i className="fas fa-up-long"></i>
+            </button>
+          </Link>
 
-          <button className="btn btn-next">
-            <i className="fas fa-down-long"></i>
-          </button>
+          <Link to={nextPage} className={nextPage === '#' ? 'hide' : ''}>
+            <button className="btn btn-next">
+              <i className="fas fa-down-long"></i>
+            </button>
+          </Link>
         </div>
       </footer>
     </div>

@@ -91,10 +91,25 @@
       border-right: 2px solid $font-primary;
       height: 8vh;
       position: absolute;
+    }
+
+    .line-1 {
       top: 34vh;
     }
 
-    .line:last-child {
+    .line-2 {
+      top: 42vh;
+    }
+
+    .line-3 {
+      top: 50vh;
+    }
+
+    .line-4 {
+      top: 58vh;
+    }
+
+    .line {
       border-right: 2px solid $font-dark;
       height: 32vh;
     }
