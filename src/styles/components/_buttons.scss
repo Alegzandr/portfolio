@@ -7,9 +7,12 @@
   border-radius: 50%;
   width: 4vh;
   height: 4vh;
-  line-height: 0;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   border: 0;
-  padding: 0 !important;
+  padding: 2.5vh !important;
 }
 
 .btn-menu {
@@ -23,16 +26,16 @@
 
 .btn-previous {
   bottom: 10vh;
-  right: 13vh;
+  right: 8.5vw;
 }
 
 .btn-next {
   bottom: 4vh;
-  right: 13vh;
+  right: 8.5vw;
 }
 
 @media (min-width: 768px) {
   .btn-menu {
-    right: 13vh;
+    right: 8.5vw;
   }
 }

@@ -1,7 +1,7 @@
 body {
+  // Background
+  background: $body-bg url("/assets/img/background.jpg");
   @include background-size(cover);
-  background: $body-bg;
-  @include linear-gradient($body-gradient);
   overflow: hidden;
 }
 
@@ -51,7 +51,7 @@ aside, main {
   }
 
   main {
-    width: 60vw;
+    width: 55vw;
   }
 
   .sidebar-right {

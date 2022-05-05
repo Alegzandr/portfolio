@@ -5,7 +5,7 @@ function Home() {
 
   return(
     <div className="home">
-      <h3>{t('title')}</h3>
+      <h1 title={t('title')}>{t('title')}</h1>
       <p>
         {t('about-me')}
       </p>

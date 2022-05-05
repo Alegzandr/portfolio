@@ -93,7 +93,7 @@ function App() {
                 <NavLink to="/">{t('home')}</NavLink>
               </li>
               <li>
-                <NavLink to="/about">{t('experience')}</NavLink>
+                <NavLink to="/experience">{t('experience')}</NavLink>
               </li>
               <li>
                 <NavLink to="/skills">{t('skills')}</NavLink>
