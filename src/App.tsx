@@ -2,37 +2,28 @@ import { useEffect, useState } from 'react';
 import { Routes, Route, NavLink, useLocation, Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import './styles/main.scss';
-import Home from './home/Home';
-import Experience from './experience/Experience';
-import Skills from './skills/Skills';
-import Contact from './contact/Contact';
+import { routes, LoadRoutes, LoadNavLinks } from './common/routes';
 
 function App() {
   // Translations
   const { i18n, t } = useTranslation('home');
-  const changeLanguage = (lng: string) => {
-    i18n.changeLanguage(lng);
-  };
+  const changeLanguage = (lng: string) => { i18n.changeLanguage(lng); };
 
-  i18n.on('languageChanged', (lng) => {document.documentElement.setAttribute('lang', lng);})
+  i18n.on('languageChanged', (lng) => {
+    document.documentElement.setAttribute('lang', lng);
+  });
 
   // Menu
   const [open, setOpen] = useState(false);
-
-  const toggleClass = () => {
-    setOpen(!open);
-  };
+  const toggleClass = () => { setOpen(!open); };
 
   // Current page number
   const [number, setNumber] = useState(1);
   const currentPath = useLocation().pathname;
-  const pages = ['/', '/experience', '/skills', '/contact'];
 
   useEffect(() => {
-    for (let i = 0; i < pages.length; i++) {
-      if (pages[i] === currentPath)
-        setNumber(i + 1);
-    }
+    for (let i = 0; i < routes.length; i++)
+      if (routes[i].path === currentPath) setNumber(i + 1);
   });
 
   // Go to next page with buttons
@@ -40,14 +31,14 @@ function App() {
   const [nextPage, setNextPage] = useState('#');
 
   useEffect(() => {
-    if (currentPath !== pages[0]) {
-      setPreviousPage(pages[pages.indexOf(currentPath) - 1]);
+    if (currentPath !== routes[0].path) {
+      setPreviousPage(routes[routes.findIndex(o => o.path === currentPath) - 1].path);
     } else {
       setPreviousPage('#');
     }
 
-    if (currentPath !== pages[pages.length - 1]) {
-      setNextPage(pages[pages.indexOf(currentPath) + 1]);
+    if (currentPath !== routes[routes.length - 1].path) {
+      setNextPage(routes[routes.findIndex(o => o.path === currentPath) + 1].path);
     } else {
       setNextPage('#');
     }
@@ -68,12 +59,7 @@ function App() {
       </aside>
 
       <main className={open ? 'hide' : ''}>
-        <Routes>
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/skills" element={<Skills />} />
-          <Route path="/experience" element={<Experience />} />
-          <Route path="/" element={<Home />} />
-        </Routes>
+        <LoadRoutes />
       </main>
 
       <aside className="sidebar-right">
@@ -89,18 +75,7 @@ function App() {
                   <img src="/img/logo.png" alt="Alexandre Farrenq" />
                 </NavLink>
               </li>
-              <li>
-                <NavLink to="/">{t('home')}</NavLink>
-              </li>
-              <li>
-                <NavLink to="/experience">{t('experience')}</NavLink>
-              </li>
-              <li>
-                <NavLink to="/skills">{t('skills')}</NavLink>
-              </li>
-              <li>
-                <NavLink to="/contact">{t('contact')}</NavLink>
-              </li>
+              <LoadNavLinks />
             </ul>
           </div>
 

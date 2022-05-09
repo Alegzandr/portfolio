@@ -24,6 +24,7 @@ a.active {
 // Titles
 h1 {
   text-align: center;
+  text-transform: lowercase;
   font-size: 3.5em;
   filter: drop-shadow(0 0 10px #000);
 }
@@ -32,17 +33,23 @@ h1:before {
   content: attr(title);
   text-transform: uppercase;
   position: absolute;
-  margin: -1vh 0 0 -8vw;
-  font-size: 1.2em;
+  width: 100vw;
+  margin: -5vh 0 0 -22vw;
+  left: 0;
+  font-size: 2em;
   opacity: .25;
 }
 
 h1:after {
   content: "";
   position: absolute;
+  margin: 4vh 0 0 -16vw;
   z-index: -1;
-  width: 10vw;
-  height: 10vh;
+  width: 16vw;
+  height: 5vh;
+  background-image: url("/assets/img/dots.svg");
+  background-size: 33%;
+  opacity: .75;
 }
 
 // Navigation

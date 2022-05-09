@@ -1,3 +1,30 @@
 .contact {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 
+  section {
+    width: 50%;
+  }
+
+  .avatar img {
+    border-radius: 50%;
+    height: 15vh;
+    position: relative;
+    z-index: -2;
+    border: 2px solid #fff;
+  }
+
+  .avatar:before {
+    content: "";
+    width: 3vh;
+    height: 3vh;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    $online: to bottom, #35d24b 0%, #1f880b 100%;
+    @include linear-gradient($online);
+    position: absolute;
+    margin-top: 12vh;
+    margin-left: 12vh;
+  }
 }
