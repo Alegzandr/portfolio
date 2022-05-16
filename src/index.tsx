@@ -1,8 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
-import { useTranslation } from 'react-i18next';
-import 'animate.css';
 import 'typeface-lato';
 import App from './App';
 import './common/i18n';

@@ -1,17 +1,19 @@
 import { useEffect, useState } from 'react';
-import { Routes, Route, NavLink, useLocation, Link } from 'react-router-dom';
+import { NavLink, useLocation, Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import './styles/main.scss';
-import { routes, LoadRoutes, LoadNavLinks } from './common/routes';
+import { routes, LoadRoutes } from './common/routes';
 
 function App() {
   // Translations
-  const { i18n, t } = useTranslation('home');
+  const { i18n } = useTranslation();
   const changeLanguage = (lng: string) => { i18n.changeLanguage(lng); };
 
   i18n.on('languageChanged', (lng) => {
     document.documentElement.setAttribute('lang', lng);
   });
+
+  const { t } = useTranslation('home');
 
   // Menu
   const [open, setOpen] = useState(false);
@@ -75,7 +77,26 @@ function App() {
                   <img src="/img/logo.png" alt="Alexandre Farrenq" />
                 </NavLink>
               </li>
-              <LoadNavLinks />
+              <li>
+                <NavLink to="/" onClick={() => setOpen(false)}>
+                  {t('home')}
+                </NavLink>
+              </li>
+              <li>
+                <NavLink to="/experience" onClick={() => setOpen(false)}>
+                  {t('experience')}
+                </NavLink>
+              </li>
+              <li>
+                <NavLink to="/skills" onClick={() => setOpen(false)}>
+                  {t('skills')}
+                </NavLink>
+              </li>
+              <li>
+                <NavLink to="/contact" onClick={() => setOpen(false)}>
+                  {t('contact')}
+                </NavLink>
+              </li>
             </ul>
           </div>
 
