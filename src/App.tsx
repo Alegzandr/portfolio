@@ -6,14 +6,12 @@ import { routes, LoadRoutes } from './common/routes';
 
 function App() {
   // Translations
-  const { i18n } = useTranslation();
+  const { i18n, t } = useTranslation('home');
   const changeLanguage = (lng: string) => { i18n.changeLanguage(lng); };
 
   i18n.on('languageChanged', (lng) => {
     document.documentElement.setAttribute('lang', lng);
   });
-
-  const { t } = useTranslation('home');
 
   // Menu
   const [open, setOpen] = useState(false);
