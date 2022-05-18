@@ -7,9 +7,10 @@ function Home() {
   return(
     <motion.div
       className="home"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
+      initial={{ opacity: 0, y: 100 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: -100 }}
+      transition={{ type: "spring", stiffness: 50 }}
     >
       <h1 title={t('title')}>{t('title')}</h1>
       <p>

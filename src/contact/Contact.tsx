@@ -8,9 +8,10 @@ function Contact() {
   return(
     <motion.div
       className="contact"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
+      initial={{ opacity: 0, y: 100 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: -100 }}
+      transition={{ type: "spring", stiffness: 50 }}
     >
       <section>
         <div className="avatar online">
@@ -29,7 +30,12 @@ function Contact() {
       </section>
 
       <section>
-        <iframe src={`https://www.google.com/maps/embed/v1/place?key=${apiKey}&q=Nogent+sur+Marne,France`}></iframe>
+        <iframe
+          src={`https://www.google.com/maps/embed/v1/place?key=${apiKey}&q=Nogent+sur+Marne,France`}
+          width="200"
+          height="200"
+        >
+        </iframe>
       </section>
     </motion.div>
   );

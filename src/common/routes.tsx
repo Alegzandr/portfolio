@@ -15,16 +15,12 @@ const routes = [
 function LoadRoutes() {
   const location = useLocation();
 
-  const allRoutes = routes.map(route => {
-    return(
-      <Route path={route.path} element={route.element} />
-    );
-  });
-
   return(
     <AnimatePresence>
       <Routes location={location} key={location.pathname}>
-        {allRoutes}
+        {routes.map((route) => (
+          <Route path={route.path} element={route.element} />
+        ))}
       </Routes>
     </AnimatePresence>
   );

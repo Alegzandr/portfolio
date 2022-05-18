@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { NavLink, useLocation, Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import { motion, AnimatePresence } from 'framer-motion';
 import './styles/main.scss';
 import { routes, LoadRoutes } from './common/routes';
 
@@ -41,6 +42,60 @@ function App() {
       setNextPage(routes[routes.findIndex(o => o.path === currentPath) + 1].path);
     } else {
       setNextPage('#');
+    }
+  });
+
+  // Line indicator animations
+  let lineInitial = { top: '34vh' };
+  let lineAnimate = { top: '34vh' };
+
+  switch(number) {
+    case 2:
+      lineInitial.top = '42vh';
+      lineAnimate.top = '42vh';
+      break;
+    case 3:
+      lineInitial.top = '50vh';
+      lineAnimate.top = '50vh';
+      break;
+    case 4:
+      lineInitial.top = '58vh';
+      lineAnimate.top = '58vh';
+      break;
+  }
+
+  useEffect(() => {
+    switch(number) {
+      case 1:
+        if (lineAnimate.top === '42vh')
+          lineInitial.top = '42vh';
+
+        lineAnimate.top = '34vh';
+        break;
+      case 2:
+        if (lineAnimate.top === '34vh')
+          lineInitial.top = '34vh';
+
+        if (lineAnimate.top === '50vh')
+          lineInitial.top = '50vh';
+
+        lineAnimate.top = '42vh';
+        break;
+      case 3:
+        if (lineAnimate.top === '42vh')
+          lineInitial.top = '42vh';
+
+        if (lineAnimate.top === '58vh')
+          lineInitial.top = '58vh';
+
+        lineAnimate.top = '50vh';
+        break;
+      case 4:
+        if (lineAnimate.top === '50vh')
+          lineInitial.top = '50vh'
+
+        lineAnimate.top = '58vh';
+        break;
     }
   });
 
@@ -124,10 +179,33 @@ function App() {
         </nav>
 
         <div className={`shape ${open ? 'hide' : ''}`}>
-          <div className={`line line-${number}`}></div>
-          <div className="line"></div>
+          <AnimatePresence>
+            <motion.div
+              key={currentPath}
+              className="line"
+              initial={lineInitial}
+              animate={lineAnimate}
+              transition={{ type: "spring", stiffness: 50 }}
+            />
+          </AnimatePresence>
+
+          <div className="main-line"></div>
         </div>
       </aside>
+
+      <div>
+        <Link to={previousPage} className={previousPage === '#' ? 'hide' : ''}>
+          <button className="btn btn-previous">
+            <i className="fas fa-up-long"></i>
+          </button>
+        </Link>
+
+        <Link to={nextPage} className={nextPage === '#' ? 'hide' : ''}>
+          <button className="btn btn-next">
+            <i className="fas fa-down-long"></i>
+          </button>
+        </Link>
+      </div>
 
       <footer className={open ? 'hide' : ''}>
         <ul>
@@ -138,20 +216,6 @@ function App() {
             <a href="https://github.com/Alegzandr" target="_blank" rel="noreferrer">GitHub</a>
           </li>
         </ul>
-
-        <div>
-          <Link to={previousPage} className={previousPage === '#' ? 'hide' : ''}>
-            <button className="btn btn-previous">
-              <i className="fas fa-up-long"></i>
-            </button>
-          </Link>
-
-          <Link to={nextPage} className={nextPage === '#' ? 'hide' : ''}>
-            <button className="btn btn-next">
-              <i className="fas fa-down-long"></i>
-            </button>
-          </Link>
-        </div>
       </footer>
     </div>
   );

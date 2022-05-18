@@ -87,29 +87,14 @@
     align-items: center;
     height: 100vh;
 
-    .line:first-child {
+    .line {
       border-right: 1px solid $font-primary;
       height: 8vh;
       position: absolute;
-    }
-
-    .line-1 {
       top: 34vh;
     }
 
-    .line-2 {
-      top: 42vh;
-    }
-
-    .line-3 {
-      top: 50vh;
-    }
-
-    .line-4 {
-      top: 58vh;
-    }
-
-    .line {
+    .main-line {
       border-right: 1px solid $font-dark;
       height: 32vh;
     }
