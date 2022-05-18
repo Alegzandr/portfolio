@@ -25,7 +25,7 @@ function App() {
   useEffect(() => {
     for (let i = 0; i < routes.length; i++)
       if (routes[i].path === currentPath) setNumber(i + 1);
-  });
+  }, [currentPath]);
 
   // Go to next page with buttons
   const [previousPage, setPreviousPage] = useState('#');
@@ -43,7 +43,7 @@ function App() {
     } else {
       setNextPage('#');
     }
-  });
+  }, [currentPath, setPreviousPage, setNextPage]);
 
   // Line indicator animations
   let lineInitial = { top: '34vh' };
