@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { NavLink, useLocation, Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import './styles/main.scss';
 import { routes, LoadRoutes } from './common/routes';
 
@@ -179,15 +179,12 @@ function App() {
         </nav>
 
         <div className={`shape ${open ? 'hide' : ''}`}>
-          <AnimatePresence>
-            <motion.div
-              key={currentPath}
-              className="line"
-              initial={lineInitial}
-              animate={lineAnimate}
-              transition={{ type: "spring", stiffness: 50 }}
-            />
-          </AnimatePresence>
+          <motion.div
+            className="line"
+            initial={lineInitial}
+            animate={lineAnimate}
+            transition={{ type: "spring", stiffness: 50 }}
+          />
 
           <div className="main-line"></div>
         </div>
