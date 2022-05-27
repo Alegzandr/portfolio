@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 
 type FooterProps = {
   previousPage: string,
@@ -20,15 +21,23 @@ const Footer = (props: FooterProps) => {
 
       <div className={props.menuOpen ? 'hide' : ''}>
         <Link to={props.previousPage} className={props.previousPage === '#' ? 'hide' : ''}>
-          <button className="btn btn-previous">
+          <motion.button
+            className="btn btn-previous"
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+          >
             <i className="fas fa-up-long"></i>
-          </button>
+          </motion.button>
         </Link>
 
         <Link to={props.nextPage} className={props.nextPage === '#' ? 'hide' : ''}>
-          <button className="btn btn-next">
+          <motion.button
+            className="btn btn-next"
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+          >
             <i className="fas fa-down-long"></i>
-          </button>
+          </motion.button>
         </Link>
       </div>
     </footer>

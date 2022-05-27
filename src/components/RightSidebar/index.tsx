@@ -12,9 +12,13 @@ type RightSidebarProps = {
 const RightSidebar = (props: RightSidebarProps) => {
   return(
     <aside className="sidebar-right">
-      <button className={`btn btn-menu ${props.menuOpen ? 'btn-exit' : ''}`} onClick={props.menuOpen ? props.close : props.open}>
+      <motion.button
+        className={`btn btn-menu ${props.menuOpen ? 'btn-exit' : ''}`} onClick={props.menuOpen ? props.close : props.open}
+        whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: 0.9 }}
+      >
         <i className={`fas ${props.menuOpen ? 'fa-xmark' : 'fa-bars'}`}></i>
-      </button>
+      </motion.button>
 
       <AnimatePresence
         initial={false}
