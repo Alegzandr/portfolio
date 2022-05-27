@@ -20,8 +20,8 @@ const Menu = (props: MenuProps) => {
     <motion.nav
       initial={{ y: '-100vh', opacity: 0 }}
       animate={{ y: '0', opacity: 1 }}
-      transition= {{ duration: 0.1, type: 'spring', damping: 25, stiffness: 500 }}
-      exit={{ y: '100vh', opacity: 0 }}
+      transition= {{ type: 'spring', stiffness: 250, damping: 25, duration: 0.1 }}
+      exit={{ y: '-100vh', opacity: 0 }}
     >
       <div className="navigation">
         <ul>

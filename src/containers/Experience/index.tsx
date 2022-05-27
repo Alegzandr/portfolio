@@ -10,7 +10,7 @@ const Experience = () => {
       initial={{ opacity: 0, y: 100 }}
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: -100 }}
-      transition={{ type: "spring", stiffness: 50 }}
+      transition= {{ type: 'spring', stiffness: 250, damping: 25, duration: 0.1 }}
     >
 
     </motion.div>
