@@ -38,6 +38,7 @@ function App() {
       <Footer
         previousPage={usePreviousPage()} 
         nextPage={useNextPage()}
+        menuOpen={menuOpen}
       />
     </div>
   );

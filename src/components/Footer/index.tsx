@@ -2,13 +2,14 @@ import { Link } from 'react-router-dom';
 
 type FooterProps = {
   previousPage: string,
-  nextPage: string
+  nextPage: string,
+  menuOpen: boolean
 };
 
 const Footer = (props: FooterProps) => {
   return(
     <footer>
-      <ul>
+      <ul className="socials">
         <li>
           <a href="https://www.linkedin.com/in/alexandrefarrenq/" target="_blank" rel="noreferrer">LinkedIn</a>
         </li>
@@ -17,7 +18,7 @@ const Footer = (props: FooterProps) => {
         </li>
       </ul>
 
-      <div>
+      <div className={props.menuOpen ? 'hide' : ''}>
         <Link to={props.previousPage} className={props.previousPage === '#' ? 'hide' : ''}>
           <button className="btn btn-previous">
             <i className="fas fa-up-long"></i>

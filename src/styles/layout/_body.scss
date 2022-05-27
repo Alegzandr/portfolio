@@ -41,12 +41,12 @@ aside, main {
   height: 100vh;
 }
 
-.sidebar-left, footer {
+.sidebar-left, footer .socials {
   display: none;
 }
 
 @media (min-width: 768px) {
-  .sidebar-left, footer {
+  .sidebar-left, footer .socials {
     display: block;
   }
 

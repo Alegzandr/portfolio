@@ -25,17 +25,25 @@
 }
 
 .btn-previous {
-  bottom: 10vh;
-  right: 8.5vw;
+  bottom: 12vh;
+  right: 2vh;
 }
 
 .btn-next {
   bottom: 4vh;
-  right: 8.5vw;
+  right: 2vh;
 }
 
 @media (min-width: 768px) {
-  .btn-menu {
+  .btn-menu, .btn-previous, .btn-next {
     right: 8.5vw;
+  }
+
+  .btn-menu {
+    top: 3vh;
+  }
+
+  .btn-previous {
+    bottom: 10vh;
   }
 }
