@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
 import 'typeface-lato';
 import App from './App';
-import './common/i18n';
+import './i18n';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(

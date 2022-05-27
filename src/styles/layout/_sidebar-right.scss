@@ -1,11 +1,8 @@
 .sidebar-right {
-  // Menu
-  .open {
-    display: block !important;
-  }
-
   nav {
-    display: none;
+    position: absolute;
+    left: 0;
+    z-index: 998;
     width: 100vw;
     background: $nav-bg;
   

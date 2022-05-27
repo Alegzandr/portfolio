@@ -1,7 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 
-function Home() {
+const Home = () => {
   const { t } = useTranslation('home');
 
   return(
