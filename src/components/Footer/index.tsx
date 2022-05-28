@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
+import AnimatedA from '../AnimatedA';
+import AnimatedButton from '../AnimatedButton';
 
 type FooterProps = {
   previousPage: string,
@@ -12,32 +13,24 @@ const Footer = (props: FooterProps) => {
     <footer>
       <ul className="socials">
         <li>
-          <a href="https://www.linkedin.com/in/alexandrefarrenq/" target="_blank" rel="noreferrer">LinkedIn</a>
+          <AnimatedA href="https://www.linkedin.com/in/alexandrefarrenq/" target="_blank" rel="noreferrer">LinkedIn</AnimatedA>
         </li>
         <li>
-          <a href="https://github.com/Alegzandr" target="_blank" rel="noreferrer">GitHub</a>
+          <AnimatedA href="https://github.com/Alegzandr" target="_blank" rel="noreferrer">GitHub</AnimatedA>
         </li>
       </ul>
 
       <div className={props.menuOpen ? 'hide' : ''}>
         <Link to={props.previousPage} className={props.previousPage === '#' ? 'hide' : ''}>
-          <motion.button
-            className="btn btn-previous"
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
-          >
+          <AnimatedButton className="btn btn-previous">
             <i className="fas fa-up-long"></i>
-          </motion.button>
+          </AnimatedButton>
         </Link>
 
         <Link to={props.nextPage} className={props.nextPage === '#' ? 'hide' : ''}>
-          <motion.button
-            className="btn btn-next"
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
-          >
+          <AnimatedButton className="btn btn-next">
             <i className="fas fa-down-long"></i>
-          </motion.button>
+          </AnimatedButton>
         </Link>
       </div>
     </footer>

@@ -14,7 +14,11 @@ const Router = (props: RouterProps) => {
   const location = useLocation();
 
   return(
-    <AnimatePresence>
+    <AnimatePresence
+      initial={false}
+      exitBeforeEnter={true}
+      onExitComplete={() => null}
+    >
       <Routes location={location} key={location.pathname}>
         {props.routes.map((route) => (
           <Route path={route.path} element={route.element} />

@@ -1,17 +1,11 @@
 import { useTranslation } from 'react-i18next';
-import { motion } from 'framer-motion';
+import AnimatedDiv from '../../components/AnimatedDiv';
 
 const Contact = () => {
   const { t } = useTranslation('contact');
 
   return(
-    <motion.div
-      className="contact"
-      initial={{ opacity: 0, y: 100 }}
-      animate={{ opacity: 1, y: 0 }}
-      exit={{ opacity: 0, y: -100 }}
-      transition= {{ type: 'spring', stiffness: 250, damping: 25, duration: 0.1 }}
-    >
+    <AnimatedDiv className="contact">
       <section>
         <div className="avatar online">
           <img src="/img/avatar.jpg" alt="Alexandre Farrenq" />
@@ -37,7 +31,7 @@ const Contact = () => {
           loading="lazy"
         ></iframe>
       </section>
-    </motion.div>
+    </AnimatedDiv>
   );
 }
 
