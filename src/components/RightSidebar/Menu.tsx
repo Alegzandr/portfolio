@@ -3,7 +3,6 @@ import { NavLink } from 'react-router-dom';
 import { motion } from 'framer-motion';
 
 type MenuProps = {
-  menuOpen: boolean,
   close: () => void
 };
 

@@ -1,12 +1,13 @@
 import { useTranslation } from 'react-i18next';
 import AnimatedDiv from '../../components/AnimatedDiv';
+import H1 from '../../components/H1';
 
 const Home = () => {
   const { t } = useTranslation('home');
 
   return(
     <AnimatedDiv className="home">
-      <h1 title={t('title')}>{t('title')}</h1>
+      <H1>{t('title')}</H1>
 
       <p>
         {t('about-me')}

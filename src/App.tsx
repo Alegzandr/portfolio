@@ -10,9 +10,8 @@ import useNextPage from './hooks/useNextPage';
 import useMenu from './hooks/useMenu';
 import useLineIndicator from './hooks/useLineIndicator';
 
-
-function App() {
-  const { menuOpen, open, close } = useMenu();
+const App = () => {
+  const { menuOpen, openMenu, closeMenu } = useMenu();
   const { lineInitial, lineAnimate } = useLineIndicator('34vh', '42vh', '50vh', '58vh');
 
   return (
@@ -29,8 +28,8 @@ function App() {
 
       <RightSidebar
         menuOpen={menuOpen}
-        open={open}
-        close={close}
+        openMenu={openMenu}
+        closeMenu={closeMenu}
         lineInitial={lineInitial}
         lineAnimate={lineAnimate}
       />

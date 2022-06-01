@@ -3,10 +3,10 @@ import { useState } from 'react';
 const useMenu = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
-  const close = () => setMenuOpen(false);
-  const open = () => setMenuOpen(true);
+  const closeMenu = () => setMenuOpen(false);
+  const openMenu = () => setMenuOpen(true);
 
-  return { menuOpen, close, open };
+  return { menuOpen, closeMenu, openMenu };
 };
 
 export default useMenu;

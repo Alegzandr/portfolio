@@ -34,6 +34,10 @@
   right: 2vh;
 }
 
+.btn-modal {
+  z-index: 998;
+}
+
 @media (min-width: 768px) {
   .btn-menu, .btn-previous, .btn-next {
     right: 8.5vw;
