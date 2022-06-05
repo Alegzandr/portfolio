@@ -1,9 +1,30 @@
 .experience {
-  .modals-list {
-    list-style-type: circle;
-    margin-top: 4em;
+  >.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
   }
 
+  >.container > section {
+    background: #33333F;
+    border-radius: .9em;
+    width: 40%;
+    padding: 0 1em;
+  }
+
+  >.container > section:not(:first-of-type) {
+    margin-left: 3vw;
+  }
+
+  h2 > i {
+    padding-right: 1vw;
+  }
+
+  .modals-list {
+    list-style-type: circle;
+  }
+
+  // Dots
   .modals-list > li::marker {
     font-size: 2em;
   }
@@ -14,16 +35,17 @@
     top: -.25em;
     border-radius: .5em;
     height: 2.25em;
-    width: 40%;
+    width: 85%;
     background: #282834;
     padding: .5em 1em;
+    align-items: flex-start;
   }
 
   .modals-list > li {
     margin-top: 1.5em;
   }
 
-  /* Line */
+  // Lines
   .modals-list > li:before {
     content:"";
     position: absolute;
