@@ -12,10 +12,10 @@ const Footer = (props: FooterProps) => {
   return(
     <footer>
       <ul className="socials">
-        <li key="LinkedIn">
+        <li>
           <AnimatedA href="https://www.linkedin.com/in/alexandrefarrenq/" target="_blank" rel="noreferrer">LinkedIn</AnimatedA>
         </li>
-        <li key="GitHub">
+        <li>
           <AnimatedA href="https://github.com/Alegzandr" target="_blank" rel="noreferrer">GitHub</AnimatedA>
         </li>
       </ul>

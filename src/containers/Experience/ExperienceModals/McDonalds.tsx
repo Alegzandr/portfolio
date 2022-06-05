@@ -20,11 +20,9 @@ const McDonalds = () => {
         <h2>{t('mcDonalds.title')}</h2>
         <h3>{t('mcDonalds.contract')}</h3>
 
-        <ul>
-          {t<string, string[]>('mcDonalds.works', { returnObjects: true }).map((work) => (
-            <li key={work}>{work}</li>
-          ))}
-        </ul>
+        <div className="white-space">
+          {t('mcDonalds.works', { returnObjects: true })}
+        </div>
       </AnimatedModal>
     </Fragment>
   );

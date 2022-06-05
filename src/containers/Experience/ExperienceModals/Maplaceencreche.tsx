@@ -20,11 +20,9 @@ const Maplaceencreche = () => {
         <h2>{t('maplaceencreche.title')}</h2>
         <h3>{t('maplaceencreche.contract')}</h3>
 
-        <ul>
-          {t<string, string[]>('maplaceencreche.works', { returnObjects: true }).map((work) => (
-            <li key={work}>{work}</li>
-          ))}
-        </ul>
+        <div className="white-space">
+          {t('maplaceencreche.works', { returnObjects: true })}
+        </div>
       </AnimatedModal>
     </Fragment>
   );

@@ -1,4 +1,4 @@
-import { ReactNode } from 'react';
+import { ReactNode, Fragment } from 'react';
 import { AnimatePresence } from 'framer-motion';
 import Modal from '../Modal';
 import AnimatedButton from '../AnimatedButton';
@@ -13,7 +13,7 @@ type AnimatedModalProps = {
 
 const AnimatedModal = (props: AnimatedModalProps) => {
   return(
-    <li key={props.title}>
+    <li>
       <AnimatedButton
         className="btn btn-modal"
         onClick={props.modalOpen ? props.closeModal : props.openModal}

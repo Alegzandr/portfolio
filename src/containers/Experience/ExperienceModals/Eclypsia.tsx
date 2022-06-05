@@ -20,11 +20,9 @@ const Eclypsia = () => {
         <h2>{t('eclypsia.title')}</h2>
         <h3>{t('eclypsia.contract')}</h3>
 
-        <ul>
-          {t<string, string[]>('eclypsia.works', { returnObjects: true }).map((work) => (
-            <li key={work}>{work}</li>
-          ))}
-        </ul>
+        <div className="white-space">
+          {t('eclypsia.works', { returnObjects: true })}
+        </div>
       </AnimatedModal>
     </Fragment>
   );
