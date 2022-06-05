@@ -1,5 +1,7 @@
 {
   "title": "Mon expérience professionnelle",
+  "work-experience": "Expérience professionnelle",
+  "education": "Formation",
   "langs": "Technologies utilisées",
   "website": "Consulter le site",
   "mauriceGenevoix": {
@@ -18,7 +20,7 @@
     "title": "Équipier polyvalent chez McDonald's Dijon",
     "contract": "CDI - Mars à Août 2015 (6 mois)",
     "works": [
-      "Travail en équipe et formation des nouveaux arrivantse\n\n",
+      "Travail en équipe et formation des nouveaux arrivants\n\n",
       "Livraisons, lobby, plonge, service"
     ]
   },
@@ -26,8 +28,8 @@
     "title": "Développeur Fullstack JavaScript chez maplaceencrèche",
     "contract": "Stage - Juin à Septembre 2016 (4 mois)",
     "works": [
-      "Développement du nouveau front-office, de l'optimisation et de la mise à jour de toutes les plateformes : blog, recrutement, publicitée\n\n",
-      "Participation à la migration du back-office depuis Symfony/MySQL vers AngularJS/MongoDBe\n\n",
+      "Développement du nouveau front-office, de l'optimisation et de la mise à jour de toutes les plateformes : blog, recrutement, publicité\n\n",
+      "Participation à la migration du back-office depuis Symfony/MySQL vers AngularJS/MongoDB\n\n",
       "$t(langs) : NodeJS, MongoDB, AngularJS, Jekyll, WordPress"
     ]
   },
@@ -35,8 +37,8 @@
     "title": "Développeur Fullstack JavaScript/PHP chez Eclypsia",
     "contract": "Alternance - Octobre 2017 à Janvier 2018 (5 mois)",
     "works": [
-      "Création de scripts pour automatiser des tâches: Diffusion en direct, sites secondaires B2B et maintenance du site principale\n\n",
-      "Collaboration directe avec l’administrateur système sur le choix et la configuration des serveurse\n\n",
+      "Création de scripts pour automatiser des tâches: Diffusion en direct, sites secondaires B2B et maintenance du site principal\n\n",
+      "Collaboration directe avec l’administrateur système sur le choix et la configuration des serveurs\n\n",
       "$t(langs) : NodeJS, Symfony, MySQL, React"
     ]
   },
@@ -44,8 +46,8 @@
     "title": "Création & développement d'un jeu de cartes en ligne : Loco",
     "contract": "Projet personnel - Août 2021 à Aujourd'hui",
     "works": [
-      "Collaboration avec un web designere\n\n",
-      "Développement de l'entièreté du jeue\n\n",
+      "Collaboration avec un web designer\n\n",
+      "Développement de l'entièreté du jeu\n\n",
       "$t(langs) : TypeScript, SASS, ExpressJS, React, SocketIO"
     ]
   }
