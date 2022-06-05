@@ -1,3 +1,51 @@
 {
-  "title": "My experience"
+  "title": "My experience",
+  "langs": "Techs used",
+  "mauriceGenevoix": {
+    "title": "Science Baccalaureate"
+  },
+  "universiteDeBourgogne": {
+    "title": "Degree in Computer Science and Electronics"
+  },
+  "epitechDigital": {
+    "title": "Web Technologies"
+  },
+  "hetic": {
+    "title": "Web Bachelor"
+  },
+  "mcDonalds": {
+    "title": "Crew Member at McDonald's Dijon",
+    "contract": "Permanant contract - March to August 2015 (6 months)",
+    "works": [
+      "Teamwork and training of newcomers",
+      "Deliveries, lobby, dishwashing, service"
+    ]
+  },
+  "maplaceencreche": {
+    "title": "Fullstack JavaScript Developer at maplaceencrèche",
+    "contract": "Internship - June to September 2016 (4 months)",
+    "works": [
+      "Development of the new front-office, optimization and updating of all platforms: blog, recruitment, advertising",
+      "Participation in the migration of the back-office from Symfony/MySQL to AngularJS/MongoDB",
+      "$t(langs) : NodeJS, MongoDB, AngularJS, Jekyll, WordPress"
+    ]
+  },
+  "eclypsia": {
+    "title": "Fullstack JavaScript/PHP Developer at Eclypsia",
+    "contract": "Sandwich courses - October 2017 to January 2018 (5 months)",
+    "works": [
+      "Creation of scripts to automate tasks: Live broadcast, B2B secondary websites and maintenance of the main website",
+      "Direct collaboration with the system administrator on the choice and configuration of servers",
+      "$t(langs) : NodeJS, Symfony, MySQL, React"
+    ]
+  },
+  "loco": {
+    "title": "Creation & development of an online card game : Loco",
+    "contract": "Personnal project - August 2021 up to today",
+    "works": [
+      "Collaboration with a web designer",
+      "Development of the entire game",
+      "$t(langs) : TypeScript, SASS, ExpressJS, React, SocketIO"
+    ]
+  }
 }
