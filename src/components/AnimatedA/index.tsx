@@ -3,8 +3,8 @@ import { motion } from 'framer-motion';
 
 type AnimatedAProps = {
   href: string,
-  target: string,
-  rel: string
+  target?: string,
+  rel?: string
   children?: ReactNode
 };
 
