@@ -15,7 +15,7 @@ const Experience = () => {
         <section>
           <h2>
             <i className="fas fa-briefcase"></i>
-            Work experience
+            {t('work-experience')}
           </h2>
           <ExperienceModals />
         </section>
@@ -23,7 +23,7 @@ const Experience = () => {
         <section>
           <h2>
             <i className="fas fa-book"></i>
-            Education
+            {t('education')}
           </h2>
           <EducationModals />
         </section>
