@@ -24,27 +24,16 @@ a.active {
 // Titles
 h1 {
   position: relative;
-  text-align: center;
   text-transform: lowercase;
   font-size: 3.5em;
   filter: drop-shadow(0 0 10px #000);
-}
-
-h1:before {
-  content: attr(title);
-  text-transform: uppercase;
-  position: absolute;
-  top: -50%;
-  left: 22.5%;
-  font-size: 1.5em;
-  opacity: .25;
 }
 
 h1:after {
   content: "";
   position: absolute;
   top: 60%;
-  left: 25%;
+  left: 10%;
   z-index: -1;
   width: 50%;
   height: 70%;

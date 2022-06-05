@@ -1,5 +1,13 @@
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-family: 'Lato', sans-serif;
+  font-family: "Mulish", sans-serif;
+}
+
+@font-face {
+  font-family: "Chaney";
+  src: url("/assets/fonts/chaney-ultraextended.otf")}
+
+h1 {
+  font-family: "Chaney", sans-serif;
 }

@@ -18,7 +18,12 @@ const Modal = (props: ModalProps) => {
           transition= {{ type: 'spring', stiffness: 250, damping: 25, duration: 0.1 }}
           exit={{ y: '100vh', opacity: 0 }}
         >
-          <button onClick={props.closeModal}>Close</button>
+          <button 
+            onClick={props.closeModal}
+            className="btn btn-exit"
+          >
+            <i className="fas fa-xmark"></i>
+          </button>
           {props.children}
         </motion.div>
     </Backdrop>
