@@ -1,8 +1,10 @@
 import { Fragment } from 'react';
+import { useTranslation } from 'react-i18next';
 import useModal from '../../../hooks/useModal';
 import AnimatedModal from '../../../components/AnimatedModal';
 
 const Eclypsia = () => {
+  const { t } = useTranslation('experience');
   const { modalOpen, openModal, closeModal } = useModal();
 
   return(
@@ -15,21 +17,13 @@ const Eclypsia = () => {
       >
         <img src="/img/logos/eclypsia.png" alt="Eclypsia" />
 
-        <h2>Développeur Fullstack JavaScript/PHP chez Eclypsia</h2>
-        <h3>Alternance - Octobre 2017 à Janvier 2018 (5 mois)</h3>
+        <h2>{t('eclypsia.title')}</h2>
+        <h3>{t('eclypsia.contract')}</h3>
 
         <ul>
-          <li>
-            Création de scripts pour automatiser des tâches :
-            Diffusion en direct, sites secondaires B2B & maintenance du site principal
-          </li>
-          <li>
-            Collaboration directe avec l’administrateur système sur
-            le choix & la configuration des serveurs
-          </li>
-          <li>
-            Technologies utilisées : NodeJS, Symfony, MySQL, React
-          </li>
+          {t<string, string[]>('eclypsia.works', { returnObjects: true }).map((work) => (
+            <li key={work}>{work}</li>
+          ))}
         </ul>
       </AnimatedModal>
     </Fragment>

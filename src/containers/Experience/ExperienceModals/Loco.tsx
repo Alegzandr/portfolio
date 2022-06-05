@@ -1,8 +1,10 @@
 import { Fragment } from 'react';
+import { useTranslation } from 'react-i18next';
 import useModal from '../../../hooks/useModal';
 import AnimatedModal from '../../../components/AnimatedModal';
 
 const Loco = () => {
+  const { t } = useTranslation('experience');
   const { modalOpen, openModal, closeModal } = useModal();
 
   return(
@@ -15,15 +17,13 @@ const Loco = () => {
       >
         <img src="/img/logos/loco.svg" alt="Loco" />
 
-        <h2>
-          Création & développement d'un jeu de cartes en ligne : Loco
-        </h2>
-        <h3>Projet personnel - Août 2021 à Aujourd'hui</h3>
+        <h2>{t('loco.title')}</h2>
+        <h3>{t('loco.contract')}</h3>
 
         <ul>
-          <li>Collaboration avec un web designer</li>
-          <li>Développement de l'entièreté du jeu</li>
-          <li>Technologies utilisées : TypeScript, SASS, ExpressJS, React, SocketIO</li>
+          {t<string, string[]>('loco.works', { returnObjects: true }).map((work) => (
+            <li key={work}>{work}</li>
+          ))}
         </ul>
       </AnimatedModal>
     </Fragment>

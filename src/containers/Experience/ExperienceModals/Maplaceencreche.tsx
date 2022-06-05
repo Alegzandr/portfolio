@@ -1,8 +1,10 @@
 import { Fragment } from 'react';
+import { useTranslation } from 'react-i18next';
 import useModal from '../../../hooks/useModal';
 import AnimatedModal from '../../../components/AnimatedModal';
 
 const Maplaceencreche = () => {
+  const { t } = useTranslation('experience');
   const { modalOpen, openModal, closeModal } = useModal();
 
   return(
@@ -15,22 +17,13 @@ const Maplaceencreche = () => {
       >
         <img src="/img/logos/maplaceencreche.png" alt="maplaceencrèche" />
 
-        <h2>Développeur Fullstack JavaScript chez maplaceencrèche</h2>
-        <h3>Stage - Juin à Septembre 2016 (4 mois)</h3>
+        <h2>{t('maplaceencreche.title')}</h2>
+        <h3>{t('maplaceencreche.contract')}</h3>
 
         <ul>
-          <li>
-            Développement du nouveau frontoffice, de l'optimisation & de la
-            mise à jour de toutes les plateformes : blog, recrutement,
-            publicité
-          </li>
-          <li>
-            Participation à la migration du backoffice depuis
-            Symfony/MySQL vers AngularJS/MongoDB
-          </li>
-          <li>
-          Technologies utilisées : NodeJS, MongoDB, AngularJS, Jekyll, WordPress
-          </li>
+          {t<string, string[]>('maplaceencreche.works', { returnObjects: true }).map((work) => (
+            <li key={work}>{work}</li>
+          ))}
         </ul>
       </AnimatedModal>
     </Fragment>

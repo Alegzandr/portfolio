@@ -1,8 +1,10 @@
 import { Fragment } from 'react';
+import { useTranslation } from 'react-i18next';
 import useModal from '../../../hooks/useModal';
 import AnimatedModal from '../../../components/AnimatedModal';
 
 const MauriceGenevoix = () => {
+  const { t } = useTranslation('experience');
   const { modalOpen, openModal, closeModal } = useModal();
 
   return(
@@ -15,7 +17,7 @@ const MauriceGenevoix = () => {
       >
         <img src="/img/logos/eclypsia.png" alt="Eclypsia" />
 
-        <h2>Baccalauréat Scientifique - Decize</h2>
+        <h2>{t('mauriceGenevoix.title')} - Decize</h2>
         <h3>2013 - 2014</h3>
       </AnimatedModal>
     </Fragment>

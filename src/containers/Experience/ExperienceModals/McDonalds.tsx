@@ -1,8 +1,10 @@
 import { Fragment } from 'react';
+import { useTranslation } from 'react-i18next';
 import useModal from '../../../hooks/useModal';
 import AnimatedModal from '../../../components/AnimatedModal';
 
 const McDonalds = () => {
+  const { t } = useTranslation('experience');
   const { modalOpen, openModal, closeModal } = useModal();
 
   return(
@@ -15,12 +17,13 @@ const McDonalds = () => {
       >
         <img src="/img/logos/mcdonalds.svg" alt="McDonald's" />
         
-        <h2>Equipier polyvalent chez McDonald's Dijon</h2>
-        <h3>CDI - Mars à Août 2015 (6 mois)</h3>
+        <h2>{t('mcDonalds.title')}</h2>
+        <h3>{t('mcDonalds.contract')}</h3>
 
         <ul>
-          <li>Travail en équipe & formation des nouveaux arrivants</li>
-          <li>Livraisons, lobby, plonge, service</li>
+          {t<string, string[]>('mcDonalds.works', { returnObjects: true }).map((work) => (
+            <li key={work}>{work}</li>
+          ))}
         </ul>
       </AnimatedModal>
     </Fragment>
