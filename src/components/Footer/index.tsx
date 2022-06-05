@@ -23,13 +23,13 @@ const Footer = (props: FooterProps) => {
       <div className={props.menuOpen ? 'hide' : ''}>
         <Link to={props.previousPage} className={props.previousPage === '#' ? 'hide' : ''}>
           <AnimatedButton className="btn btn-previous">
-            <i className="fas fa-up-long"></i>
+            <i className="fas fa-chevron-up"></i>
           </AnimatedButton>
         </Link>
 
         <Link to={props.nextPage} className={props.nextPage === '#' ? 'hide' : ''}>
           <AnimatedButton className="btn btn-next">
-            <i className="fas fa-down-long"></i>
+            <i className="fas fa-chevron-down"></i>
           </AnimatedButton>
         </Link>
       </div>
