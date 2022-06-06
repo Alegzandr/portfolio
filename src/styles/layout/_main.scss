@@ -28,7 +28,7 @@ main {
   flex-direction: column;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1023px) {
   main > div:first-of-type {
     grid-template-columns: 50% 50%;
     grid-template-rows: 10vh 1fr;

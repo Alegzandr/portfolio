@@ -15,7 +15,7 @@ const Maplaceencreche = () => {
         openModal={openModal}
         closeModal={closeModal}
       >
-        <img src="/img/logos/maplaceencreche.png" alt="maplaceencrèche" />
+        <img src="/img/logos/maplaceencreche.png" alt="maplaceencrèche" className="big" />
 
         <h2>{t('maplaceencreche.title')}</h2>
         <h3>{t('maplaceencreche.contract')}</h3>

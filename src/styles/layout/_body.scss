@@ -24,7 +24,7 @@ footer .socials {
   display: none;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1023px) {
   #root>div:first-of-type {
     grid-template-columns: 20% 60% 20%;
     grid-template-rows: 85vh 15vh;

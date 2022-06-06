@@ -14,12 +14,12 @@
   }
 
   .modals-list {
-    list-style-type: circle;
+    list-style-type: "○";
   }
 
   // Dots
   .modals-list > li::marker {
-    font-size: 2em;
+    font-size: 28px;
   }
 
   .modals-list > li > button {
@@ -30,7 +30,6 @@
     height: 2.25em;
     width: 85%;
     background: #282834;
-    padding: .5em 1em;
     align-items: flex-start;
   }
 
@@ -43,8 +42,8 @@
     content: "";
     position: absolute;
     font-size: 1.5em;
-    margin-left: -23px;
-    margin-top: 1.2em;
+    margin-left: -9px;
+    margin-top: 1.15em;
     border-left: 1px solid #fff;
     height: 2.1em;
   }

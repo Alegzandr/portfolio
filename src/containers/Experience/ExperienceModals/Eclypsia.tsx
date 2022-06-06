@@ -15,7 +15,7 @@ const Eclypsia = () => {
         openModal={openModal}
         closeModal={closeModal}
       >
-        <img src="/img/logos/eclypsia.png" alt="Eclypsia" />
+        <img src="/img/logos/eclypsia.png" alt="Eclypsia" className="big" />
 
         <h2>{t('eclypsia.title')}</h2>
         <h3>{t('eclypsia.contract')}</h3>

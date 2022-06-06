@@ -25,6 +25,7 @@ const MauriceGenevoix = () => {
         <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10919.014461393956!2d3.4451484!3d46.8288527!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xeb596e0134ada4fa!2sColl%C3%A8ge%20et%20Lyc%C3%A9e%20Maurice%20Genevoix!5e0!3m2!1sfr!2sfr!4v1654466461861!5m2!1sfr!2sfr"
           loading="lazy"
         ></iframe>
+        <br />
 
         <AnimatedA href="http://lyc58-genevoix.ac-dijon.fr/" target="_blank" rel="noreferrer">
           {t('website')}

@@ -29,7 +29,7 @@ const AnimatedModal = (props: AnimatedModalProps) => {
       onExitComplete={() => null}
       >
         {props.modalOpen && <Modal closeModal={props.closeModal}>
-          {props.children}
+          <div>{props.children}</div>
         </Modal>}
       </AnimatePresence>
     </li>

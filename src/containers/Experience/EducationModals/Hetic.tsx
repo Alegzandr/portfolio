@@ -25,6 +25,7 @@ const Hetic = () => {
           src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10501.341633667436!2d2.4206932!3d48.8518142!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x5a597564e51389ac!2sHETIC!5e0!3m2!1sfr!2sfr!4v1654466127442!5m2!1sfr!2sfr"
           loading="lazy"
         ></iframe>
+        <br />
 
         <AnimatedA href="https://www.hetic.net/" target="_blank" rel="noreferrer">
           {t('website')}

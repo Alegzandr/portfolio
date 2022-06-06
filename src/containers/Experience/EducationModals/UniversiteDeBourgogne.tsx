@@ -24,6 +24,7 @@ const UniversiteDeBourgogne = () => {
         <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10820.486629911038!2d5.0713319!3d47.3119618!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x7662ef3f13bc90a8!2sUniversit%C3%A9%20de%20Bourgogne!5e0!3m2!1sfr!2sfr!4v1654466429701!5m2!1sfr!2sfr"
           loading="lazy"
         ></iframe>
+        <br />
 
         <AnimatedA href="https://www.u-bourgogne.fr/" target="_blank" rel="noreferrer">
           {t('website')}
