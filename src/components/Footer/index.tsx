@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 import AnimatedA from '../AnimatedA';
 import AnimatedButton from '../AnimatedButton';
@@ -9,14 +10,25 @@ type FooterProps = {
 };
 
 const Footer = (props: FooterProps) => {
+  const { t } = useTranslation('home');
+
   return(
     <footer>
       <ul className="socials">
         <li>
-          <AnimatedA href="https://www.linkedin.com/in/alexandrefarrenq/" target="_blank" rel="noreferrer">LinkedIn</AnimatedA>
+          <AnimatedA href="https://www.linkedin.com/in/alexandrefarrenq/" target="_blank" rel="noreferrer">
+            LinkedIn
+          </AnimatedA>
         </li>
         <li>
-          <AnimatedA href="https://github.com/Alegzandr" target="_blank" rel="noreferrer">GitHub</AnimatedA>
+          <AnimatedA href="https://github.com/Alegzandr" target="_blank" rel="noreferrer">
+            GitHub
+          </AnimatedA>
+        </li>
+        <li>
+          <AnimatedA href="https://github.com/Alegzandr/portfolio" target="_blank" rel="noreferrer">
+            {t('made')} <i className="fab fa-react"></i>
+          </AnimatedA>
         </li>
       </ul>
 

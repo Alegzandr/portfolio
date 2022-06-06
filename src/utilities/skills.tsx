@@ -1,7 +1,7 @@
 const skills = [
-  { name: 'NodeJS', img: '', category: 'Back-end' },
-  { name: 'React', img: '', category: 'Front-end' },
-  { name: 'Symfony', img: '', category: 'Back-end' }
+  { name: 'NodeJS', image: 'nodejs.svg', category: 'Back-end' },
+  { name: 'React', image: 'react.svg', category: 'Front-end' },
+  { name: 'MongoDB', image: 'mongodb.svg', category: 'Back-end' }
 ];
 
 const categories: string[] = [];

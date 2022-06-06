@@ -16,16 +16,19 @@ const Skills = () => {
       <article>
         <div className="filters">
           {categories.map((category) => (
-            <AnimatedSmallButton onClick={() => handleFilter(category)}>
+            <AnimatedSmallButton
+              className={`btn btn-small ${filter === category ? 'active' : ''}`}
+              onClick={() => handleFilter(category)}
+            >
               {category}
             </AnimatedSmallButton>
           ))}
         </div>
 
-        <p>Current filter : {filter}</p>
-
-        <div>
-          {getSkills.map((skill) => skill.name)}
+        <div className="results">
+          {getSkills.map((skill) => (
+            <img src={`/img/techs/${skill.image}`} alt={skill.name} />
+          ))}
         </div>
       </article>
     </AnimatedDiv>

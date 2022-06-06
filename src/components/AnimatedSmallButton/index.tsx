@@ -2,6 +2,7 @@ import { ReactNode } from 'react';
 import { motion } from 'framer-motion';
 
 type AnimatedSmallButtonProps = {
+  className: string,
   onClick?: () => void,
   children?: ReactNode
 };
@@ -9,7 +10,7 @@ type AnimatedSmallButtonProps = {
 const AnimatedSmallButton = (props: AnimatedSmallButtonProps) => {
   return(
     <motion.button
-      className="btn btn-small"
+      className={props.className}
       whileHover={{ backgroundColor: '#fff', color: '#000' }}
       whileTap={{ scale: 0.95 }}
       onClick={props.onClick}

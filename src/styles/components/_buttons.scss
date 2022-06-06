@@ -40,6 +40,7 @@
 
 .filters {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .btn-small {
@@ -51,10 +52,16 @@
   font-size: .8em;
   padding: 0 2em !important;
   border: 1px solid #fff;
+  z-index: 998;
 }
 
 .btn-small:not(:first-of-type) {
   margin-left: 10px;
+}
+
+.btn-small.active {
+  background-color: #fff !important;
+  color: #000 !important;
 }
 
 @media (min-width: 1023px) {
