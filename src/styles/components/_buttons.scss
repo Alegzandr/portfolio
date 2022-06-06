@@ -38,6 +38,25 @@
   z-index: 998;
 }
 
+.filters {
+  display: flex;
+}
+
+.btn-small {
+  position: static;
+  background-color: rgba(255, 255, 255, 0);
+  height: 4vh;
+  width: auto;
+  border-radius: 2em;
+  font-size: .8em;
+  padding: 0 2em !important;
+  border: 1px solid #fff;
+}
+
+.btn-small:not(:first-of-type) {
+  margin-left: 10px;
+}
+
 @media (min-width: 1023px) {
   .btn-menu, .btn-previous, .btn-next {
     right: 8.5vw;
