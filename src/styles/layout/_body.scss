@@ -9,52 +9,28 @@ body {
   display: none !important;
 }
 
-#root>div {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+#root>div:first-of-type {
+  display: grid;
+  grid-template-columns: 85% 15%;
+  grid-template-rows: 100vh;
 }
 
 .sidebar-left {
-  width: 20vw;
+  display: none;
   text-align: center;
 }
 
-main {
-  padding-left: 5vw;
-  width: 80vw;
-}
-
-.sidebar-right {
-  width: 15vw;
-}
-
-footer {
-  width: 100vw;
-  height: 15vh;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-}
-
-aside, main {
-  height: 100vh;
-}
-
-.sidebar-left, footer .socials {
+footer .socials {
   display: none;
 }
 
 @media (min-width: 768px) {
+  #root>div:first-of-type {
+    grid-template-columns: 20% 60% 20%;
+    grid-template-rows: 85vh 15vh;
+  }
+
   .sidebar-left, footer .socials {
     display: block;
-  }
-
-  main {
-    width: 55vw;
-  }
-
-  .sidebar-right {
-    width: 20vw;
-  }
+  } 
 }

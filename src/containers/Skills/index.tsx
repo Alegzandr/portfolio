@@ -8,6 +8,8 @@ const Skills = () => {
   return(
     <AnimatedDiv className="skills">
       <H1>{t('title')}</H1>
+
+      <article></article>
     </AnimatedDiv>
   );
 }

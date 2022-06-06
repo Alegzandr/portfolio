@@ -9,13 +9,15 @@ const Home = () => {
     <AnimatedDiv className="home">
       <H1>{t('title')}</H1>
 
-      <p>
-        {t('about-me')}
-      </p>
+      <article>
+        <p>
+          {t('about-me')}
+        </p>
 
-      <p>
-        {t('goals')}
-      </p>
+        <p>
+          {t('goals')}
+        </p>
+      </article>
     </AnimatedDiv>
   );
 }

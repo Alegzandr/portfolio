@@ -1,19 +1,12 @@
 .experience {
-  >.container {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+  section {
+    padding: 1.5em;
   }
 
-  >.container > section {
+  section > article {
     background: #33333F;
     border-radius: .9em;
-    width: 40%;
-    padding: 0 1em;
-  }
-
-  >.container > section:not(:first-of-type) {
-    margin-left: 3vw;
+    padding: .5em 1.5em;
   }
 
   h2 > i {
@@ -47,10 +40,10 @@
 
   // Lines
   .modals-list > li:before {
-    content:"";
+    content: "";
     position: absolute;
     font-size: 1.5em;
-    margin-left: -.95em;
+    margin-left: -23px;
     margin-top: 1.2em;
     border-left: 1px solid #fff;
     height: 2.1em;

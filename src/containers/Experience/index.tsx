@@ -11,23 +11,25 @@ const Experience = () => {
     <AnimatedDiv className="experience">
       <H1>{t('title')}</H1>
 
-      <div className="container">
-        <section>
+      <section>
+        <article>
           <h2>
             <i className="fas fa-briefcase"></i>
             {t('work-experience')}
           </h2>
           <ExperienceModals />
-        </section>
+        </article>
+      </section>
 
-        <section>
+      <section>
+        <article>
           <h2>
             <i className="fas fa-book"></i>
             {t('education')}
           </h2>
           <EducationModals />
-        </section>
-      </div>
+        </article>
+      </section>
     </AnimatedDiv>
   );
 }
