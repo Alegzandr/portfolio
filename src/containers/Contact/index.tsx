@@ -17,11 +17,11 @@ const Contact = () => {
       </section>
 
       <section>
-      <form action="https://www.mailthis.to/alexandrefarrenq@hotmail.fr">
-          <input type="text" name="name" value="Name" />
-          <input type="email" name="email" value="Email" />
-          <input type="text" name="subject" value="Subject" />
-          <textarea name="message" value="Message"></textarea>
+      <form action="https://www.mailthis.to/alexandrefarrenq@hotmail.fr" method="post">
+          <input type="text" name="name" placeholder="Name" />
+          <input type="email" name="_replyto" placeholder="Email" />
+          <input type="text" name="_subject" placeholder="Subject" />
+          <textarea name="message" placeholder="Message"></textarea>
 
           <input type="submit" value="Send message !" />
         </form>
