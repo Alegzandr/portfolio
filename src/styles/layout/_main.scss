@@ -2,15 +2,17 @@
 main > div:first-of-type {
   display: grid;
   grid-template-columns: 100%;
-  grid-template-rows: 100vh;
-  align-items: center;
+  grid-template-rows: 50vh;
+  height: 50vh;
+  margin-top: 25vh;
 }
 
 // Layout 2 : Two columns
 main > div:first-of-type.two-columns {
-  align-items: stretch;
   grid-template-columns: 100%;
   grid-template-rows: 50vh 50vh;
+  height: auto;
+  margin-top: 0;
 
   section:first-of-type {
     align-self: flex-end;
