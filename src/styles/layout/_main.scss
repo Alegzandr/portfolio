@@ -3,15 +3,13 @@ main > div:first-of-type {
   display: grid;
   grid-template-columns: 100%;
   grid-template-rows: 50vh;
-  height: 50vh;
-  margin-top: 25vh;
+  margin-top: 12.5vh;
 }
 
 // Layout 2 : Two columns
 main > div:first-of-type.two-columns {
   grid-template-columns: 100%;
   grid-template-rows: 50vh 50vh;
-  height: auto;
   margin-top: 0;
 
   section:first-of-type {
@@ -35,15 +33,14 @@ main > div:first-of-type.two-columns.middle-title {
 @media (min-width: 1023px) {
   // Layout 1
   main > div:first-of-type {
-    height: 50vh;
     margin-top: 25vh;
-    align-items: stretch;
   }
 
   // Layout 2
   main > div:first-of-type.two-columns {
     grid-template-columns: 50% 50%;
     grid-template-rows: 50vh;
+    margin-top: 25vh;
 
     section:first-of-type {
       align-self: stretch;
