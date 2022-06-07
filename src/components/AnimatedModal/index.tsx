@@ -1,4 +1,4 @@
-import { ReactNode, Fragment } from 'react';
+import { ReactNode } from 'react';
 import { AnimatePresence } from 'framer-motion';
 import Modal from '../Modal';
 import AnimatedButton from '../AnimatedButton';

@@ -15,7 +15,7 @@ const App = () => {
   const { lineInitial, lineAnimate } = useLineIndicator('34vh', '42vh', '50vh', '58vh');
 
   return (
-    <div>
+    <>
       <LeftSidebar
         number={usePageNumber()}
       />
@@ -39,7 +39,7 @@ const App = () => {
         nextPage={useNextPage()}
         menuOpen={menuOpen}
       />
-    </div>
+    </>
   );
 }
 

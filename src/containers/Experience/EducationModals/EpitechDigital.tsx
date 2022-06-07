@@ -1,4 +1,3 @@
-import { Fragment } from 'react';
 import { useTranslation } from 'react-i18next';
 import useModal from '../../../hooks/useModal';
 import AnimatedModal from '../../../components/AnimatedModal';
@@ -9,7 +8,7 @@ const EpitechDigital = () => {
   const { modalOpen, openModal, closeModal } = useModal();
 
   return(
-    <Fragment>
+    <>
       <AnimatedModal
         title="Epitech Digital"
         modalOpen={modalOpen}
@@ -33,7 +32,7 @@ const EpitechDigital = () => {
           {t('website')}
         </AnimatedA>
       </AnimatedModal>
-    </Fragment>
+    </>
   );
 };
 

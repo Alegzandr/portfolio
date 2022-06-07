@@ -1,66 +1,66 @@
-main> div:first-of-type {
+// Layout 1 : One column
+main > div:first-of-type {
   display: grid;
   grid-template-columns: 100%;
-  grid-template-rows: 10vh 45vh 45vh;
+  grid-template-rows: 100vh;
   align-items: center;
+}
 
-  // Screen non-splitted
-  > article {
-    grid-row-start: 2;
-    grid-row-end: 4;
-  }
+// Layout 2 : Two columns
+main > div:first-of-type.two-columns {
+  align-items: stretch;
+  grid-template-columns: 100%;
+  grid-template-rows: 50vh 50vh;
 
-  // Screen splitted in two sections
-  > section:nth-child(2) {
-    grid-row-start: 2;
-    grid-row-end: 3;
-  }
-
-  > section:nth-child(3) {
-    grid-row-start: 3;
-    grid-row-end: 4;
+  section:first-of-type {
+    align-self: flex-end;
   }
 }
 
-main {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
+// Layout 3 : Two columns with title in the middle
+main > div:first-of-type.two-columns.middle-title {
+  grid-template-rows: 20vh 40vh 40vh;
+
+  > h1 {
+    align-self: flex-end;
+  }
+
+  section:first-of-type {
+    align-self: stretch;
+  }
 }
 
 @media (min-width: 1023px) {
+  // Layout 1
   main > div:first-of-type {
+    height: 50vh;
+    margin-top: 25vh;
+    align-items: stretch;
+  }
+
+  // Layout 2
+  main > div:first-of-type.two-columns {
     grid-template-columns: 50% 50%;
-    grid-template-rows: 10vh 1fr;
+    grid-template-rows: 50vh;
 
-    // Screen non-splitted
-    > article {
-      grid-row-start: 2;
-      grid-column-start: 1;
-      grid-column-end: 3;
+    section:first-of-type {
+      align-self: stretch;
     }
 
-    // Screen splitted in two sections
-    > h1 {
-      grid-row-start: 1;
-      grid-column-start: 1;
-      grid-column-end: 3;
-    }
-  
-    > section:nth-child(2) {
-      grid-row-start: 2;
-      grid-column-start: 1;
-      grid-column-end: 2;
-    }
-  
-    > section:nth-child(3) {
-      grid-row-start: 2;
-      grid-column-start: 2;
-      grid-column-end: 3;
+    section:nth-child(2) {
+      align-self: center;
     }
   }
 
-  main {
-    padding-top: 15vh;
+  // Layout 3
+  main > div:first-of-type.two-columns.middle-title {
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 10vh 40vh;
+
+    > h1 {
+      align-self: stretch;
+      grid-column-start: 1;
+      grid-column-end: 3;
+    }
   }
 }

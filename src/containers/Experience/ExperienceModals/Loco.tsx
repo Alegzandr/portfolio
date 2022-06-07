@@ -1,4 +1,3 @@
-import { Fragment } from 'react';
 import { useTranslation } from 'react-i18next';
 import useModal from '../../../hooks/useModal';
 import AnimatedModal from '../../../components/AnimatedModal';
@@ -8,7 +7,7 @@ const Loco = () => {
   const { modalOpen, openModal, closeModal } = useModal();
 
   return(
-    <Fragment>
+    <>
       <AnimatedModal
         title="Loco"
         modalOpen={modalOpen}
@@ -24,7 +23,7 @@ const Loco = () => {
           {t('loco.works', { returnObjects: true })}
         </div>
       </AnimatedModal>
-    </Fragment>
+    </>
   );
 };
 

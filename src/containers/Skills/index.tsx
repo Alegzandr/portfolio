@@ -11,10 +11,10 @@ const Skills = () => {
 
   return(
     <AnimatedDiv className="skills">
-      <H1>{t('title')}</H1>
-
       <section>
         <article>
+          <H1>{t('title')}</H1>
+
           <div className="filters">
             {categories.map((category) => (
               <AnimatedSmallButton
@@ -36,8 +36,6 @@ const Skills = () => {
           </div>
         </article>
       </section>
-
-      <section></section>
     </AnimatedDiv>
   );
 }

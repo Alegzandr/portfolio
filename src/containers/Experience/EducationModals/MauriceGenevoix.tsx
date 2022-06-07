@@ -1,4 +1,3 @@
-import { Fragment } from 'react';
 import { useTranslation } from 'react-i18next';
 import useModal from '../../../hooks/useModal';
 import AnimatedModal from '../../../components/AnimatedModal';
@@ -10,7 +9,7 @@ const MauriceGenevoix = () => {
   const { modalOpen, openModal, closeModal } = useModal();
 
   return(
-    <Fragment>
+    <>
       <AnimatedModal
         title="Lycée Maurice Genevoix"
         modalOpen={modalOpen}
@@ -31,7 +30,7 @@ const MauriceGenevoix = () => {
           {t('website')}
         </AnimatedA>
       </AnimatedModal>
-    </Fragment>
+    </>
   );
 };
 

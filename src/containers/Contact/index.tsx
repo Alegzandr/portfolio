@@ -6,10 +6,10 @@ const Contact = () => {
   const { t } = useTranslation('contact');
 
   return(
-    <AnimatedDiv className="contact">
-      <H1>{t('title')}</H1>
-
+    <AnimatedDiv className="contact two-columns">
       <section>
+        <H1>{t('title')}</H1>
+
         <div className="avatar online">
           <img src="/img/avatar.jpg" alt="Alexandre Farrenq" />
           <h3>Ready to work</h3>

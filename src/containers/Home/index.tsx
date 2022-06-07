@@ -6,10 +6,10 @@ const Home = () => {
   const { t } = useTranslation('home');
 
   return(
-    <AnimatedDiv className="home">
-      <H1>{t('title')}</H1>
-
+    <AnimatedDiv className="home two-columns">
       <section>
+        <H1>{t('title')}</H1>
+
         <article>
           <p>
             {t('about-me')}

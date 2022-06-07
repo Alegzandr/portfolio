@@ -8,7 +8,7 @@ const Experience = () => {
   const { t } = useTranslation('experience');
 
   return(
-    <AnimatedDiv className="experience">
+    <AnimatedDiv className="experience two-columns middle-title">
       <H1>{t('title')}</H1>
 
       <section>
