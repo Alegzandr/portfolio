@@ -1,30 +1,34 @@
 const skills = [
-  { name: 'NodeJS', image: 'nodejs.svg', category: 'Back-end' },
-  { name: 'MongoDB', image: 'mongodb.svg', category: 'Back-end' },
-  { name: 'PHP', image: 'php.svg', category: 'Back-end' },
-  { name: 'Symfony', image: 'symfony.svg', category: 'Back-end' },
-  { name: 'MySQL', image: 'mysql.svg', category: 'Back-end' },
-  { name: 'Gulp', image: 'gulp.svg', category: 'Back-end' },
-  { name: 'React', image: 'react.svg', category: 'Front-end' },
-  { name: 'jQuery', image: 'jquery.svg', category: 'Front-end' },
-  { name: 'SASS', image: 'sass.svg', category: 'Front-end' },
-  { name: 'Bootstrap', image: 'bootstrap.png', category: 'Front-end' },
-  { name: 'Command Line', image: 'command-line.svg', category: 'Other' },
-  { name: 'Git', image: 'git.svg', category: 'Other' },
-  { name: 'WordPress', image: 'wordpress.svg', category: 'Other' },
-  { name: 'TypeScript', image: 'typescript.svg', category: 'Other' },
-  { name: 'Linux', image: 'linux.svg', category: 'Other' },
-  { name: 'NGINX', image: 'nginx.svg', category: 'Other' },
-  { name: 'Apache', image: 'apache.svg', category: 'Other' },
-  { name: 'Photoshop', image: 'photoshop.svg', category: 'Other' },
-  { name: 'After Effects', image: 'after-effects.svg', category: 'Other' }
-];
+  { name: 'NodeJS', image: 'nodejs.svg', categories:  [ 'Back-end' ]  },
+  { name: 'MongoDB', image: 'mongodb.svg', categories:  [ 'Back-end' ]  },
+  { name: 'PHP', image: 'php.svg', categories:  [ 'Back-end' ]  },
+  { name: 'Symfony', image: 'symfony.svg', categories:  [ 'Back-end' ]  },
+  { name: 'MySQL', image: 'mysql.svg', categories:  [ 'Back-end' ]  },
+  { name: 'Gulp', image: 'gulp.svg', categories:  [ 'Tools' ]  },
+  { name: 'React', image: 'react.svg', categories:  [ 'Front-end' ]  },
+  { name: 'jQuery', image: 'jquery.svg', categories:  [ 'Front-end' ]  },
+  { name: 'SASS', image: 'sass.svg', categories:  [ 'Front-end' ]  },
+  { name: 'Bootstrap', image: 'bootstrap.png', categories:  [ 'Front-end' ]  },
+  { name: 'Command Line', image: 'command-line.svg', categories:  [ 'Tools', 'DevOps' ]  },
+  { name: 'Git', image: 'git.svg', categories:  [ 'Tools', 'DevOps' ]  },
+  { name: 'WordPress', image: 'wordpress.svg', categories:  [ 'Front-end', 'Back-end' ]  },
+  { name: 'TypeScript', image: 'typescript.svg', categories:  [ 'Front-end', 'Back-end' ]  },
+  { name: 'Linux', image: 'linux.svg', categories:  [ 'DevOps' ]  },
+  { name: 'NGINX', image: 'nginx.svg', categories:  [ 'DevOps' ]  },
+  { name: 'Apache', image: 'apache.svg', categories:  [ 'DevOps' ]  },
+  { name: 'Photoshop', image: 'photoshop.svg', categories:  [ 'Creativity' ]  },
+  { name: 'After Effects', image: 'after-effects.svg', categories:  [ 'Creativity' ] }
+].sort((a,b) => (a.name > b.name) ? 1 : ((b.name > a.name) ? -1 : 0));
 
 const categories: string[] = [];
   
 skills.map((skill) => {
-  if (categories.indexOf(skill.category) === -1)
-    return categories.push(skill.category);
-}).sort();
+  skill.categories.map((category) => {
+    if (categories.indexOf(category) === -1)
+      return categories.push(category);
+  });
+});
+
+categories.sort();
 
 export { skills, categories };

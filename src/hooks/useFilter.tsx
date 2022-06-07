@@ -9,7 +9,7 @@ const useFilter = () => {
       setFilter(category);
   };
 
-  const getSkills = skills.filter(skill => skill.category.indexOf(filter) > -1);
+  const getSkills = skills.filter(skill => skill.categories.indexOf(filter) > -1);
 
   return { filter, handleFilter, getSkills };
 };

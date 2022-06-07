@@ -21,7 +21,7 @@ const Skills = () => {
                 className={`btn btn-small ${filter === category ? 'active' : ''}`}
                 onClick={() => handleFilter(category)}
               >
-                {category}
+                {t(`categories.${category.toLowerCase()}`)}
               </AnimatedSmallButton>
             ))}
           </div>
