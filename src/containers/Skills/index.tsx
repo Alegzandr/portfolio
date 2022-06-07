@@ -13,24 +13,31 @@ const Skills = () => {
     <AnimatedDiv className="skills">
       <H1>{t('title')}</H1>
 
-      <article>
-        <div className="filters">
-          {categories.map((category) => (
-            <AnimatedSmallButton
-              className={`btn btn-small ${filter === category ? 'active' : ''}`}
-              onClick={() => handleFilter(category)}
-            >
-              {category}
-            </AnimatedSmallButton>
-          ))}
-        </div>
+      <section>
+        <article>
+          <div className="filters">
+            {categories.map((category) => (
+              <AnimatedSmallButton
+                className={`btn btn-small ${filter === category ? 'active' : ''}`}
+                onClick={() => handleFilter(category)}
+              >
+                {category}
+              </AnimatedSmallButton>
+            ))}
+          </div>
 
-        <div className="results">
-          {getSkills.map((skill) => (
-            <img src={`/img/techs/${skill.image}`} alt={skill.name} />
-          ))}
-        </div>
-      </article>
+          <div className="results">
+            {getSkills.map((skill) => (
+              <AnimatedDiv className="icon tooltip">
+                <span className="tooltip-text">{skill.name}</span>
+                <img src={`/img/techs/${skill.image}`} alt={skill.name} />
+              </AnimatedDiv>
+            ))}
+          </div>
+        </article>
+      </section>
+
+      <section></section>
     </AnimatedDiv>
   );
 }

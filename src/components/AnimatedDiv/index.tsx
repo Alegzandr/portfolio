@@ -2,7 +2,7 @@ import { ReactNode } from 'react';
 import { motion } from 'framer-motion';
 
 type AnimatedDivProps = {
-  className: string,
+  className?: string,
   children?: ReactNode
 };
 

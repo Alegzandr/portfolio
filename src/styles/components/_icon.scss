@@ -1,0 +1,18 @@
+.icon {
+  width: 5em;
+  height: 5em;
+  display: flex;
+  background-color: #fff;
+  margin: 1em;
+  border-radius: 1.5em;
+
+  img {
+    width: 5em;
+    height: auto;
+    border-radius: inherit;
+  }
+
+  :hover {
+    cursor: pointer;
+  }
+}

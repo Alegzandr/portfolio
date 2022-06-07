@@ -30,6 +30,11 @@ footer .socials {
     grid-template-rows: 85vh 15vh;
   }
 
+  footer {
+    grid-column-start: 1;
+    grid-column-end: 4;
+  }
+
   .sidebar-left, footer .socials {
     display: block;
   } 

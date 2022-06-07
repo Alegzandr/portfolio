@@ -1,3 +1,17 @@
 .home {
+  section {
+    padding: 2em;
+  }
 
+  section:nth-child(2) {
+    align-self: baseline;
+  }
+
+  section:nth-child(3) {
+    text-align: center;
+  }
+
+  section > img {
+    width: 100%;
+  }
 }

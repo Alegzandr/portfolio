@@ -1,6 +1,6 @@
 .skills {
-  .results img {
-    width: auto;
-    height: 5em;
+  .filters, .results {
+    display: flex;
+    flex-wrap: wrap;
   }
 }

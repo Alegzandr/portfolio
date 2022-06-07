@@ -9,15 +9,21 @@ const Home = () => {
     <AnimatedDiv className="home">
       <H1>{t('title')}</H1>
 
-      <article>
-        <p>
-          {t('about-me')}
-        </p>
+      <section>
+        <article>
+          <p>
+            {t('about-me')}
+          </p>
 
-        <p>
-          {t('goals')}
-        </p>
-      </article>
+          <p>
+            {t('goals')}
+          </p>
+        </article>
+      </section>
+
+      <section>
+        <img src="/img/vs-code.png" alt="Code" />
+      </section>
     </AnimatedDiv>
   );
 }
