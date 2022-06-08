@@ -46,7 +46,7 @@
   border-radius: 2em;
   font-size: .8em;
   padding: 0 2em !important;
-  border: 1px solid #fff;
+  border: 1px solid $font-primary;
   z-index: 997;
 }
 
@@ -55,7 +55,7 @@
 }
 
 .btn-small.active {
-  background-color: #fff !important;
+  background-color: $font-primary !important;
   color: #000 !important;
 }
 

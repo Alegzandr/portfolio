@@ -4,7 +4,7 @@
   }
 
   section > article {
-    background: #33333F;
+    background: $article-bg;
     border-radius: .9em;
     padding: .5em 1.5em;
   }
@@ -44,7 +44,7 @@
     font-size: 1.5em;
     margin-left: -9px;
     margin-top: 1.15em;
-    border-left: 1px solid #fff;
+    border-left: 1px solid $font-primary;
     height: 2.1em;
   }
 

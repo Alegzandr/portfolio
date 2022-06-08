@@ -1,3 +1,8 @@
 {
-  "title": "Me contacter !"
+  "title": "Me contacter !",
+  "name": "Nom",
+  "email": "Email",
+  "subject": "Objet",
+  "message": "Message",
+  "send": "Envoyer mon message !"
 }

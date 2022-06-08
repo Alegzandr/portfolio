@@ -2,7 +2,7 @@
   width: 5em;
   height: 5em;
   display: flex;
-  background-color: #fff;
+  background-color: $font-primary;
   margin: 1em;
   border-radius: 1.5em;
 
@@ -10,9 +10,5 @@
     width: 5em;
     height: auto;
     border-radius: inherit;
-  }
-
-  :hover {
-    cursor: pointer;
   }
 }

@@ -3,28 +3,41 @@
   flex-direction: row;
   flex-wrap: wrap;
 
-  section {
-    width: 50%;
-  }
-
   .avatar img {
     border-radius: 50%;
     height: 15vh;
     position: relative;
     z-index: -2;
-    border: 2px solid #fff;
+    border: 2px solid $font-primary;
   }
 
-  .avatar:before {
-    content: "";
-    width: 3vh;
-    height: 3vh;
-    border-radius: 50%;
-    border: 2px solid #fff;
-    $online: to bottom, #35d24b 0%, #1f880b 100%;
-    @include linear-gradient($online);
-    position: absolute;
-    margin-top: 12vh;
-    margin-left: 12vh;
+  section {
+    width: 100%;
+
+    > form {
+      text-align: center;
+    }
+
+    > div {
+      width: 100% !important;
+      text-align: center;
+    }
+  }
+
+  iframe {
+    width: 100%;
+    height: 20em;
+  }
+}
+
+@media (min-width: 1023px) {
+  .contact {
+    .avatar img {
+      height: 20vh;
+    }
+
+    section > div, form {
+      width: 100%;
+    }
   }
 }
