@@ -11,7 +11,7 @@ const Hetic = () => {
   return(
     <>
       <AnimatedModal
-        title="Hetic"
+        title={`Hetic (${t('hetic.title').split('(')[1]}`}
         subtitle={years}
         modalOpen={modalOpen}
         openModal={openModal}

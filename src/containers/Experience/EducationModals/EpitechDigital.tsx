@@ -11,7 +11,7 @@ const EpitechDigital = () => {
   return(
     <>
       <AnimatedModal
-        title="Epitech Digital"
+        title={`Epitech Digital (${t('epitechDigital.title').split('(')[1]}`}
         subtitle={years}
         modalOpen={modalOpen}
         openModal={openModal}

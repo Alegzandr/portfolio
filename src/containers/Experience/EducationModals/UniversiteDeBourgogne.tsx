@@ -11,7 +11,7 @@ const UniversiteDeBourgogne = () => {
   return(
     <>
       <AnimatedModal
-        title="Université de Bourgogne"
+        title={`Université de Bourgogne (${t('universiteDeBourgogne.title').split('(')[1]}`}
         subtitle={years}
         modalOpen={modalOpen}
         openModal={openModal}
