@@ -1,5 +1,5 @@
 {
-  "title": "Expérience / formation",
+  "title": "Mon parcours",
   "work-experience": "Expérience professionnelle",
   "education": "Formation",
   "langs": "Technologies utilisées",
@@ -8,13 +8,40 @@
     "title": "Baccalauréat Scientifique"
   },
   "universiteDeBourgogne": {
-    "title": "Licence informatique électronique"
+    "title": "Licence informatique électronique (1e année)",
+    "subjects": [
+      "Électronique\n",
+      "Java\n",
+      "HTML/CSS/JavaScript\n",
+      "PERL\n",
+      "Maths\n",
+      "Sciences de l'ingénieur"
+    ]
   },
   "epitechDigital": {
-    "title": "Web Technologies"
+    "title": "Web Technologies (1e année)",
+    "subjects": [
+      "JavaScript\n",
+      "PHP/SQL\n",
+      "NodeJS/MongoDB\n",
+      "Logique/Algorithmique\n",
+      "Intégration\n",
+      "Réseaux sociaux\n",
+      "Excel\n",
+      "PowerPoint\n",
+      "Web Design\n",
+      "Prototypage"
+    ]
   },
   "hetic": {
-    "title": "Bachelor Web"
+    "title": "Bachelor Web (2e année)",
+    "subjects": [
+      "React\n",
+      "Meteor\n",
+      "Web Design\n",
+      "UX/UI\n",
+      "CMS"
+    ]
   },
   "mcDonalds": {
     "title": "Équipier polyvalent chez McDonald's Dijon",

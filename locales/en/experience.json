@@ -8,13 +8,40 @@
     "title": "Science Baccalaureate"
   },
   "universiteDeBourgogne": {
-    "title": "Degree in Computer Science and Electronics"
+    "title": "Degree in Computer Science and Electronics (first year)",
+    "subjects": [
+      "Electronics\n",
+      "Java\n",
+      "HTML/CSS/JavaScript\n",
+      "PERL\n",
+      "Math\n",
+      "Engineering sciences"
+    ]
   },
   "epitechDigital": {
-    "title": "Web Technologies"
+    "title": "Web Technologies (first year)",
+    "subjects": [
+      "JavaScript\n",
+      "PHP/SQL\n",
+      "NodeJS/MongoDB\n",
+      "Logic/Algorithms\n",
+      "Integration\n",
+      "Social networks\n",
+      "Excel\n",
+      "PowerPoint\n",
+      "Web Design\n",
+      "Prototyping"
+    ]
   },
   "hetic": {
-    "title": "Web Bachelor"
+    "title": "Web Bachelor (second year)",
+    "subjects": [
+      "React\n",
+      "Meteor\n",
+      "Web Design\n",
+      "UX/UI\n",
+      "CMS"
+    ]
   },
   "mcDonalds": {
     "title": "Crew Member at McDonald's Dijon",
