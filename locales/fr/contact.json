@@ -4,5 +4,6 @@
   "email": "Email",
   "subject": "Objet",
   "message": "Message",
-  "send": "Envoyer votre message !"
+  "send": "Envoyer votre message !",
+  "download": "Télécharger mon CV"
 }
