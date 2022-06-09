@@ -1,5 +1,8 @@
+import { useRef, FormEvent, RefObject } from 'react';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
+import emailjs from '@emailjs/browser';
+import emailConfig from '../../config/email';
 import AnimatedDiv from '../../components/AnimatedDiv';
 import AnimatedH1 from '../../components/AnimatedH1';
 import AnimatedA from '../../components/AnimatedA';
@@ -7,16 +10,30 @@ import AnimatedA from '../../components/AnimatedA';
 const Contact = () => {
   const { t } = useTranslation('contact');
 
+  const form = useRef() as any;
+
+  const sendEmail = (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    emailjs.sendForm(emailConfig.serviceId, emailConfig.templateId, form.current, emailConfig.publicKey)
+      .then((result) => {
+        console.log(result.text);
+        alert('Email sent !');
+      }, (error) => {
+        console.log(error.text);
+        alert('Error while sending your email');
+      });
+  };
+
   return(
     <AnimatedDiv className="contact two-columns middle-title">
       <AnimatedH1>{t('title')}</AnimatedH1>
 
       <section>
         <br />
-        <form action="https://www.mailthis.to/alexandrefarrenq@hotmail.fr" method="post">
-          <input type="text" name="name" placeholder={`${t('name')}*`} required />
-          <input type="email" name="_replyto" placeholder={`${t('email')}*`} required />
-          <input type="text" name="_subject" placeholder={`${t('subject')}*`} required />
+        <form ref={form} onSubmit={sendEmail}>
+          <input type="text" name="user_name" placeholder={`${t('name')}*`} required />
+          <input type="email" name="user_email" placeholder={`${t('email')}*`} required />
           <textarea name="message" placeholder={`${t('message')}*`} required></textarea>
 
           <motion.input
@@ -44,7 +61,7 @@ const Contact = () => {
           >
             <img src="/img/avatar.jpg" alt="Alexandre Farrenq" />
           </motion.div>
-          <h5>Ready to work</h5>
+          <h2>Ready to work</h2>
         </div>
       </section>
     </AnimatedDiv>

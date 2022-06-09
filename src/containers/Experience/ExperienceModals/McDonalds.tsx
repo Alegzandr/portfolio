@@ -19,7 +19,7 @@ const McDonalds = () => {
         
         <h2>{t('mcDonalds.title')}</h2>
         <h3>
-          {t('mcDonalds.contract')} - {t('mcDonalds.date')} ({t('mcDonalds.duration')})
+          {t('mcDonalds.contract')} | {t('mcDonalds.date')} ({t('mcDonalds.duration')})
         </h3>
 
         <div className="white-space">

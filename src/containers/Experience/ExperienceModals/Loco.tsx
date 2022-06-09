@@ -18,7 +18,7 @@ const Loco = () => {
         <img src="/img/logos/loco.png" alt="Loco" />
 
         <h2>{t('loco.title')}</h2>
-        <h3>{t('loco.contract')} - {t('loco.date')}</h3>
+        <h3>{t('loco.contract')} | {t('loco.date')}</h3>
 
         <div className="white-space">
           {t('loco.works', { returnObjects: true })}

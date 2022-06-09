@@ -5,8 +5,8 @@
   position: absolute;
   z-index: 999;
   border-radius: 50%;
-  width: 5vh;
-  height: 5vh;
+  width: 6vh;
+  height: 6vh;
   display: inline-flex;
   flex-direction: column;
   justify-content: center;
@@ -68,14 +68,10 @@
 
 @media (min-width: 1023px) {
   .btn-menu, .btn-previous, .btn-next {
-    right: 8.5vw;
+    right: 6vw;
   }
 
   .btn-menu {
     top: 3vh;
-  }
-
-  .btn-previous {
-    bottom: 10vh;
   }
 }

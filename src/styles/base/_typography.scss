@@ -1,5 +1,6 @@
 html {
-  font-size: 1.7vh;
+  font-size: 1.8vh;
+  line-height: 1.5;
 }
 
 body {
@@ -25,7 +26,7 @@ a.active {
 h1 {
   position: relative;
   text-transform: lowercase;
-  font-size: 3em;
+  font-size: 1.5em;
 }
 
 h1:after {
@@ -62,4 +63,10 @@ nav a {
 footer li, footer a {
   color: $font-dark;
   font-weight: 600;
+}
+
+@media (min-width: 1023px) {
+  h1 {
+    font-size: 3em;
+  }
 }

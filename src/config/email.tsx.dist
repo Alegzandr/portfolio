@@ -1,0 +1,7 @@
+const emailConfig = {
+  serviceId: '',
+  templateId: '',
+  publicKey: ''
+};
+
+export default emailConfig;

@@ -2,7 +2,7 @@
 main > div:first-of-type {
   display: grid;
   grid-template-columns: 100%;
-  grid-template-rows: 50vh;
+  grid-template-rows: 80vh;
   margin-top: 12.5vh;
 }
 
@@ -34,14 +34,15 @@ main > div:first-of-type.two-columns.middle-title {
 @media (min-width: 1023px) {
   // Layout 1
   main > div:first-of-type {
-    margin-top: 25vh;
+    grid-template-rows: 60vh;
+    margin-top: 20vh;
   }
 
   // Layout 2
   main > div:first-of-type.two-columns {
     grid-template-columns: 50% 50%;
-    grid-template-rows: 50vh;
-    margin-top: 25vh;
+    grid-template-rows: 60vh;
+    margin-top: 20vh;
 
     section:first-of-type {
       align-self: stretch;
@@ -55,7 +56,7 @@ main > div:first-of-type.two-columns.middle-title {
   // Layout 3
   main > div:first-of-type.two-columns.middle-title {
     grid-template-columns: 50% 50%;
-    grid-template-rows: 10vh 40vh;
+    grid-template-rows: 10vh 50vh;
 
     > h1 {
       align-self: stretch;

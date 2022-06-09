@@ -19,7 +19,7 @@ const Eclypsia = () => {
 
         <h2>{t('eclypsia.title')}</h2>
         <h3>
-          {t('eclypsia.contract')} - {t('eclypsia.date')} ({t('eclypsia.duration')})
+          {t('eclypsia.contract')} | {t('eclypsia.date')} ({t('eclypsia.duration')})
         </h3>
 
         <div className="white-space">

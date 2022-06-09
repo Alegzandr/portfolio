@@ -19,7 +19,7 @@ const Maplaceencreche = () => {
 
         <h2>{t('maplaceencreche.title')}</h2>
         <h3>
-          {t('maplaceencreche.contract')} - {t('maplaceencreche.date')} ({t('maplaceencreche.duration')})
+          {t('maplaceencreche.contract')} | {t('maplaceencreche.date')} ({t('maplaceencreche.duration')})
         </h3>
 
         <div className="white-space">

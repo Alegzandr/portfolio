@@ -21,6 +21,10 @@ form {
     color: $font-active;
   }
 
+  input:not([type=submit]), textarea {
+    color: $font-primary;
+  }
+
   input[type=submit] {
     border-radius: 2em;
     padding: .5em 1em .5em 1em;
