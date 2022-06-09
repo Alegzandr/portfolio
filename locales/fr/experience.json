@@ -18,7 +18,9 @@
   },
   "mcDonalds": {
     "title": "Équipier polyvalent chez McDonald's Dijon",
-    "contract": "CDI - Mars à Août 2015 (6 mois)",
+    "contract": "CDI",
+    "duration": "6 mois",
+    "date": "Mars - Août 2015",
     "works": [
       "Travail en équipe et formation des nouveaux arrivants\n\n",
       "Livraisons, lobby, plonge, service"
@@ -26,7 +28,9 @@
   },
   "maplaceencreche": {
     "title": "Développeur Fullstack JavaScript chez maplaceencrèche",
-    "contract": "Stage - Juin à Septembre 2016 (4 mois)",
+    "contract": "Stage",
+    "duration": "4 mois",
+    "date": "Juin - Septembre 2016",
     "works": [
       "Développement du nouveau front-office, de l'optimisation et de la mise à jour de toutes les plateformes : blog, recrutement, publicité\n\n",
       "Participation à la migration du back-office depuis Symfony/MySQL vers AngularJS/MongoDB\n\n",
@@ -35,7 +39,9 @@
   },
   "eclypsia": {
     "title": "Développeur Fullstack JavaScript/PHP chez Eclypsia",
-    "contract": "Alternance - Octobre 2017 à Janvier 2018 (5 mois)",
+    "contract": "Alternance",
+    "duration": "5 mois",
+    "date": "Octobre 2017 - Janvier 2018",
     "works": [
       "Création de scripts pour automatiser des tâches: Diffusion en direct, sites secondaires B2B et maintenance du site principal\n\n",
       "Collaboration directe avec l’administrateur système sur le choix et la configuration des serveurs\n\n",
@@ -44,7 +50,8 @@
   },
   "loco": {
     "title": "Création et développement d'un jeu de cartes en ligne : Loco",
-    "contract": "Projet personnel - Août 2021 à Aujourd'hui",
+    "contract": "Projet personnel",
+    "date": "Août 2021 - aujourd'hui",
     "works": [
       "Collaboration avec un web designer\n\n",
       "Développement de l'entièreté du jeu\n\n",

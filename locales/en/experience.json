@@ -18,7 +18,9 @@
   },
   "mcDonalds": {
     "title": "Crew Member at McDonald's Dijon",
-    "contract": "Permanant contract - March to August 2015 (6 months)",
+    "contract": "Permanant contract",
+    "duration": "6 months",
+    "date": "March - August 2015",
     "works": [
       "Teamwork and training of newcomers\n\n",
       "Deliveries, lobby, dishwashing, service"
@@ -26,7 +28,9 @@
   },
   "maplaceencreche": {
     "title": "Fullstack JavaScript Developer at maplaceencrèche",
-    "contract": "Internship - June to September 2016 (4 months)",
+    "contract": "Internship",
+    "duration": "4 months",
+    "date": "June - September 2016",
     "works": [
       "Development of the new front-office, optimization and updating of all platforms: blog, recruitment, advertising\n\n",
       "Participation in the migration of the back-office from Symfony/MySQL to AngularJS/MongoDB\n\n",
@@ -35,7 +39,9 @@
   },
   "eclypsia": {
     "title": "Fullstack JavaScript/PHP Developer at Eclypsia",
-    "contract": "Sandwich courses - October 2017 to January 2018 (5 months)",
+    "contract": "Sandwich courses",
+    "duration": "5 months",
+    "date": "October 2017 - January 2018",
     "works": [
       "Creation of scripts to automate tasks: Live broadcast, B2B secondary websites and maintenance of the main website\n\n",
       "Direct collaboration with the system administrator on the choice and configuration of servers\n\n",
@@ -44,7 +50,8 @@
   },
   "loco": {
     "title": "Creation and development of an online card game : Loco",
-    "contract": "Personnal project - August 2021 up to today",
+    "contract": "Personnal project",
+    "date": "August 2021 - today",
     "works": [
       "Collaboration with a web designer\n\n",
       "Development of the entire game\n\n",
