@@ -4,5 +4,6 @@
  "email": "Email",
  "subject": "Subject",
  "message": "Message",
- "send": "Send your message !"
+ "send": "Send your message !",
+ "download": "Download my resume"
 }

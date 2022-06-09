@@ -2,6 +2,7 @@ import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import AnimatedDiv from '../../components/AnimatedDiv';
 import AnimatedH1 from '../../components/AnimatedH1';
+import AnimatedA from '../../components/AnimatedA';
 
 const Contact = () => {
   const { t } = useTranslation('contact');
@@ -25,6 +26,12 @@ const Contact = () => {
             whileTap={{ scale: 0.95 }}
           />
         </form>
+
+        <br />
+        <AnimatedA href="/pdf/cv.pdf" download="CV Alexandre Farrenq">
+          <i className="fas fa-download"></i>&nbsp;
+          <b>{t('download')}</b>
+        </AnimatedA>
       </section>
 
       <section>

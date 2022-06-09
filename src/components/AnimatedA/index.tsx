@@ -4,7 +4,8 @@ import { motion } from 'framer-motion';
 type AnimatedAProps = {
   href: string,
   target?: string,
-  rel?: string
+  rel?: string,
+  download?: string,
   children?: ReactNode
 };
 
@@ -14,6 +15,7 @@ const AnimatedA = (props: AnimatedAProps) => {
       href={props.href}
       target={props.target}
       rel={props.rel}
+      download={props.download}
       whileHover={{ display: 'inline-block', scale: 1.05 }}
       whileTap={{ display: 'inline-block', scale: 0.9 }}
     >

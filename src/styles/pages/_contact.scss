@@ -28,6 +28,11 @@
     width: 100%;
     height: 20em;
   }
+
+  a {
+    color: $font-active;
+    font-size: .9em;
+  }
 }
 
 @media (min-width: 1023px) {
