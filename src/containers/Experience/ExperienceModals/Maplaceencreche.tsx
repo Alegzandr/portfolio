@@ -10,6 +10,7 @@ const Maplaceencreche = () => {
     <>
       <AnimatedModal
         title="maplaceencrèche"
+        subtitle={`${(t('maplaceencreche.contract'))} | ${(t('maplaceencreche.date'))}`}
         modalOpen={modalOpen}
         openModal={openModal}
         closeModal={closeModal}
@@ -17,7 +18,9 @@ const Maplaceencreche = () => {
         <img src="/img/logos/maplaceencreche.png" alt="maplaceencrèche" className="big" />
 
         <h2>{t('maplaceencreche.title')}</h2>
-        <h3>{t('maplaceencreche.contract')}</h3>
+        <h3>
+          {t('maplaceencreche.contract')} - {t('maplaceencreche.date')} ({t('maplaceencreche.duration')})
+        </h3>
 
         <div className="white-space">
           {t('maplaceencreche.works', { returnObjects: true })}

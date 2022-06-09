@@ -10,6 +10,7 @@ const McDonalds = () => {
     <>
       <AnimatedModal
         title="McDonald's"
+        subtitle={`${(t('mcDonalds.contract'))} | ${(t('mcDonalds.date'))}`}
         modalOpen={modalOpen}
         openModal={openModal}
         closeModal={closeModal}
@@ -17,7 +18,9 @@ const McDonalds = () => {
         <img src="/img/logos/mcdonalds.svg" alt="McDonald's" />
         
         <h2>{t('mcDonalds.title')}</h2>
-        <h3>{t('mcDonalds.contract')}</h3>
+        <h3>
+          {t('mcDonalds.contract')} - {t('mcDonalds.date')} ({t('mcDonalds.duration')})
+        </h3>
 
         <div className="white-space">
           {t('mcDonalds.works', { returnObjects: true })}

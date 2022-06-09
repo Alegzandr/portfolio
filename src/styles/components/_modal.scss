@@ -54,9 +54,9 @@
 
 @media (min-width: 1023px) {
   .modal {
-    width: 70vw;
+    width: 40vw;
     height: 60vh;
-    grid-template-columns: calc(70vw - 3vh) 7vh;
+    grid-template-columns: calc(40vw - 3vh) 7vh;
     grid-template-rows: 7vh 53vh;
   }
 }

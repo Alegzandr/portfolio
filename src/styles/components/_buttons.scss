@@ -38,6 +38,13 @@
   z-index: 998;
 }
 
+.btn-modal::after {
+  content: attr(title);
+  font-weight: 200;
+  text-transform: lowercase;
+  font-size: .8em;
+}
+
 .btn-small {
   position: static;
   background-color: rgba(255, 255, 255, 0);

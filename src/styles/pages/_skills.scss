@@ -4,3 +4,11 @@
     flex-wrap: wrap;
   }
 }
+
+@media (min-width: 1023px) {
+  .skills {
+    .soft-skills {
+      width: 60%;
+    }
+  }
+}

@@ -1,7 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import { categories } from '../../utilities/skills';
 import useFilter from '../../hooks/useFilter';
-import H1 from '../../components/H1'
+import AnimatedH1 from '../../components/AnimatedH1'
 import AnimatedSmallButton from '../../components/AnimatedSmallButton';
 import AnimatedDiv from '../../components/AnimatedDiv';;
 
@@ -13,7 +13,7 @@ const Skills = () => {
     <AnimatedDiv className="skills">
       <section>
         <article>
-          <H1>{t('title')}</H1>
+          <AnimatedH1>{t('title')}</AnimatedH1>
 
           <div className="filters">
             {categories.map((category) => (
@@ -25,6 +25,7 @@ const Skills = () => {
               </AnimatedSmallButton>
             ))}
           </div>
+          <br />
 
           <div className="results">
             {getSkills.map((skill) => (
@@ -33,6 +34,11 @@ const Skills = () => {
                 <img src={`/img/techs/${skill.image}`} alt={skill.name} />
               </AnimatedDiv>
             ))}
+          </div>
+
+          <div className="soft-skills">
+            <br />
+            {t('softSkills')}
           </div>
         </article>
       </section>

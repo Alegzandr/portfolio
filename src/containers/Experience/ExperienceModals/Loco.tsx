@@ -10,14 +10,15 @@ const Loco = () => {
     <>
       <AnimatedModal
         title="Loco"
+        subtitle={`${(t('loco.contract'))} | ${(t('loco.date'))}`}
         modalOpen={modalOpen}
         openModal={openModal}
         closeModal={closeModal}
       >
-        <img src="/img/logos/loco.svg" alt="Loco" />
+        <img src="/img/logos/loco.png" alt="Loco" />
 
         <h2>{t('loco.title')}</h2>
-        <h3>{t('loco.contract')}</h3>
+        <h3>{t('loco.contract')} - {t('loco.date')}</h3>
 
         <div className="white-space">
           {t('loco.works', { returnObjects: true })}

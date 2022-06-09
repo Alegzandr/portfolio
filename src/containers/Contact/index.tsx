@@ -1,14 +1,14 @@
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import AnimatedDiv from '../../components/AnimatedDiv';
-import H1 from '../../components/H1';
+import AnimatedH1 from '../../components/AnimatedH1';
 
 const Contact = () => {
   const { t } = useTranslation('contact');
 
   return(
     <AnimatedDiv className="contact two-columns middle-title">
-      <H1>{t('title')}</H1>
+      <AnimatedH1>{t('title')}</AnimatedH1>
 
       <section>
         <br />
@@ -28,9 +28,15 @@ const Contact = () => {
       </section>
 
       <section>
-        <div className="avatar online">
+        <div className="avatar online" >
           <br />
-          <img src="/img/avatar.jpg" alt="Alexandre Farrenq" />
+          <motion.div
+            initial={{ rotate: -180 }}
+            animate={{ rotate: 0 }}
+            transition= {{ type: 'spring', stiffness: 250, damping: 25, duration: 1 }}
+          >
+            <img src="/img/avatar.jpg" alt="Alexandre Farrenq" />
+          </motion.div>
           <h5>Ready to work</h5>
         </div>
       </section>

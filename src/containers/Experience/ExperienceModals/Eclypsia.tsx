@@ -10,6 +10,7 @@ const Eclypsia = () => {
     <>
       <AnimatedModal
         title="Eclypsia"
+        subtitle={`${(t('eclypsia.contract'))} | ${(t('eclypsia.date'))}`}
         modalOpen={modalOpen}
         openModal={openModal}
         closeModal={closeModal}
@@ -17,7 +18,9 @@ const Eclypsia = () => {
         <img src="/img/logos/eclypsia.png" alt="Eclypsia" className="big" />
 
         <h2>{t('eclypsia.title')}</h2>
-        <h3>{t('eclypsia.contract')}</h3>
+        <h3>
+          {t('eclypsia.contract')} - {t('eclypsia.date')} ({t('eclypsia.duration')})
+        </h3>
 
         <div className="white-space">
           {t('eclypsia.works', { returnObjects: true })}

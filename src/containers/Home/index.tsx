@@ -1,7 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import AnimatedDiv from '../../components/AnimatedDiv';
-import H1 from '../../components/H1';
+import AnimatedH1 from '../../components/AnimatedH1';
 
 const Home = () => {
   const { t } = useTranslation('home');
@@ -9,7 +9,7 @@ const Home = () => {
   return(
     <AnimatedDiv className="home two-columns">
       <section>
-        <H1>{t('title')}</H1>
+        <AnimatedH1>{t('title')}</AnimatedH1>
         <br />
 
         <article>

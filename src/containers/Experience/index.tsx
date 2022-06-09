@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import AnimatedDiv from '../../components/AnimatedDiv';
-import H1 from '../../components/H1';
+import AnimatedH1 from '../../components/AnimatedH1';
 import ExperienceModals from './ExperienceModals';
 import EducationModals from './EducationModals';
 
@@ -9,7 +9,7 @@ const Experience = () => {
 
   return(
     <AnimatedDiv className="experience two-columns middle-title">
-      <H1>{t('title')}</H1>
+      <AnimatedH1>{t('title')}</AnimatedH1>
 
       <section>
         <article>

@@ -5,6 +5,7 @@ import AnimatedButton from '../AnimatedButton';
 
 type AnimatedModalProps = {
   title: string,
+  subtitle?: string,
   modalOpen: boolean,
   openModal: () => void,
   closeModal: () => void,
@@ -19,6 +20,7 @@ const AnimatedModal = (props: AnimatedModalProps) => {
         onClick={props.modalOpen ? props.closeModal : props.openModal}
         hoverScale={1.05}
         tapScale={0.95}
+        title={props.subtitle}
       >
         {props.title}
       </AnimatedButton>

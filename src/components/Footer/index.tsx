@@ -1,5 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 import AnimatedA from '../AnimatedA';
 import AnimatedButton from '../AnimatedButton';
 
@@ -15,6 +16,12 @@ const Footer = (props: FooterProps) => {
   return(
     <footer>
       <ul className="socials">
+        <li>
+          <i className="fas fa-user"></i>&nbsp;
+          Alexandre Farrenq &nbsp;
+          <i className="fas fa-location-dot"></i>&nbsp;
+          Paris, France
+        </li>
         <li>
           <AnimatedA href="https://www.linkedin.com/in/alexandrefarrenq/" target="_blank" rel="noreferrer">
             LinkedIn
@@ -41,7 +48,12 @@ const Footer = (props: FooterProps) => {
 
         <Link to={props.nextPage} className={props.nextPage === '#' ? 'hide' : ''}>
           <AnimatedButton className="btn btn-next">
-            <i className="fas fa-chevron-down"></i>
+            <motion.i
+              className="fas fa-chevron-down"
+              initial={{ scale: 0 }}
+              animate={{ scale: [1, 1.5, 1, 1.5, 1] }}
+              transition= {{ type: 'spring', stiffness: 250, damping: 25, duration: 1 }}
+            ></motion.i>
           </AnimatedButton>
         </Link>
       </div>
