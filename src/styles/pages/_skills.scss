@@ -3,10 +3,18 @@
     display: flex;
     flex-wrap: wrap;
   }
+
+  .filters {
+    gap: 1vw;
+  }
 }
 
 @media (min-width: 1023px) {
   .skills {
+    .filters {
+      gap: normal;
+    }
+
     .soft-skills {
       width: 60%;
     }

@@ -1,12 +1,12 @@
 .experience {
-  section {
-    padding: 1.5em;
-  }
-
   section > article {
     background: $article-bg;
     border-radius: .9em;
     padding: .5em 1.5em;
+  }
+
+  h2 {
+    font-size: 1.1em;
   }
 
   h2 > i {
@@ -14,41 +14,66 @@
   }
 
   .modals-list {
-    list-style-type: "○";
-  }
-
-  // Dots
-  .modals-list > li::marker {
-    font-size: 28px;
+    list-style-type: none;
   }
 
   .modals-list > li > button {
     position: relative;
-    left: 1.5em;
+    left: -1.5em;
     top: -.25em;
     border-radius: .5em;
     height: 2.25em;
-    width: 85%;
+    width: 100%;
     background: #282834;
     align-items: flex-start;
   }
 
   .modals-list > li {
-    margin-top: 1.5em;
-  }
-
-  // Lines
-  .modals-list > li:before {
-    content: "";
-    position: absolute;
-    font-size: 1.5em;
-    margin-left: -9px;
-    margin-top: 1.15em;
-    border-left: 1px solid $font-primary;
-    height: 2.1em;
+    margin-top: .5em;
   }
 
   .modals-list > li:last-child::before {
     height: .5em;
+  }
+}
+
+@media (min-width: 1023px) {
+  .experience {
+    section {
+      padding: 1.5em;
+    }
+
+    h2 {
+      font-size: 1.5em;
+    }
+
+    .modals-list {
+      list-style-type: "○";
+    }
+
+    .modals-list > li > button {
+      left: 1.5em;
+      width: 85%;
+    }
+
+    // Dots
+    .modals-list > li::marker {
+      font-size: 28px;
+    }
+
+    // Lines
+    .modals-list > li:before {
+      content: "";
+      position: absolute;
+      font-size: 1.5em;
+      margin-left: -9px;
+      margin-top: 1.15em;
+      border-left: 1px solid $font-primary;
+      height: 2.1em;
+    }
+
+    .modals-list > li {
+      margin-top: 1.5em;
+    }
   }
 }

@@ -1,14 +1,26 @@
 .icon {
-  width: 5em;
-  height: 5em;
+  width: 4em;
+  height: 4em;
   display: flex;
   background-color: $font-primary;
   margin: 1em;
-  border-radius: 1.5em;
+  border-radius: 1.2em;
 
   img {
-    width: 5em;
+    width: 4em;
     height: auto;
     border-radius: inherit;
+  }
+}
+
+@media (min-width: 1023px) {
+  .icon {
+    width: 5em;
+    height: 5em;
+    border-radius: 1.5em;
+
+    img {
+      width: 5em;
+    }
   }
 }

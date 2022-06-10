@@ -42,8 +42,10 @@
   }
   
   img {
+    object-fit: scale-down;
     height: 20vh;
     width: auto;
+    max-width: 60vw;
   }
 
   img.big {

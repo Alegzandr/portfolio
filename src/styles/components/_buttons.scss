@@ -38,13 +38,6 @@
   z-index: 998;
 }
 
-.btn-modal::after {
-  content: attr(title);
-  font-weight: 200;
-  text-transform: lowercase;
-  font-size: .8em;
-}
-
 .btn-small {
   position: static;
   background-color: rgba(255, 255, 255, 0);
@@ -73,5 +66,12 @@
 
   .btn-menu {
     top: 3vh;
+  }
+
+  .btn-modal::after {
+    content: attr(title);
+    font-weight: 200;
+    text-transform: lowercase;
+    font-size: .8em;
   }
 }

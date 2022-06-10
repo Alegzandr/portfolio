@@ -3,14 +3,14 @@ main > div:first-of-type {
   display: grid;
   grid-template-columns: 100%;
   grid-template-rows: 80vh;
-  margin-top: 12.5vh;
+  padding: 5vw;
 }
 
 // Layout 2 : Two columns
 main > div:first-of-type.two-columns {
   grid-template-columns: 100%;
   grid-template-rows: 50vh 50vh;
-  margin-top: 0;
+  margin-top: 5vw;
 
   section:first-of-type {
     align-self: flex-end;
@@ -19,7 +19,7 @@ main > div:first-of-type.two-columns {
 
 // Layout 3 : Two columns with title in the middle
 main > div:first-of-type.two-columns.middle-title {
-  grid-template-rows: 20vh 40vh 40vh;
+  grid-template-rows: 10vh 40vh 40vh;
 
   > h1 {
     align-self: flex-end;
@@ -36,6 +36,7 @@ main > div:first-of-type.two-columns.middle-title {
   main > div:first-of-type {
     grid-template-rows: 60vh;
     margin-top: 20vh;
+    padding: 0;
   }
 
   // Layout 2
