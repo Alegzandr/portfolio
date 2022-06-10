@@ -23,9 +23,11 @@ const skills = [
 const categories: string[] = [];
   
 skills.map((skill) => {
-  skill.categories.map((category) => {
+  return skill.categories.map((category) => {
     if (categories.indexOf(category) === -1)
       return categories.push(category);
+
+    return '';
   });
 });
 

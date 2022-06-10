@@ -1,4 +1,4 @@
-import { useRef, FormEvent, RefObject } from 'react';
+import { useRef, FormEvent } from 'react';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import emailjs from '@emailjs/browser';
