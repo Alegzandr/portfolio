@@ -32,6 +32,7 @@ const App = () => {
         closeMenu={closeMenu}
         lineInitial={lineInitial}
         lineAnimate={lineAnimate}
+        routes={routes}
       />
 
       <Footer

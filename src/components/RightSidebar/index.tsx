@@ -1,3 +1,5 @@
+import { ReactNode } from 'react';
+import { Link } from 'react-router-dom';
 import { AnimatePresence, motion } from 'framer-motion';
 import AnimatedButton from '../AnimatedButton';
 import Menu from './Menu';
@@ -7,7 +9,12 @@ type RightSidebarProps = {
   openMenu: () => void,
   closeMenu: () => void,
   lineInitial: { top: string },
-  lineAnimate: { top: string }
+  lineAnimate: { top: string },
+  routes: Array<{
+    name: string,
+    path: string,
+    element: ReactNode
+  }>
 };
 
 const RightSidebar = (props: RightSidebarProps) => {
@@ -37,6 +44,12 @@ const RightSidebar = (props: RightSidebarProps) => {
         />
 
         <div className="main-line"></div>
+
+        <div className="nav-links">
+          {props.routes.map((route) => (
+            <Link to={route.path}></Link>
+          ))}
+        </div>
       </div>
     </aside>
   );

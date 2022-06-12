@@ -95,5 +95,30 @@
       border-right: 1px solid $font-dark;
       height: 32vh;
     }
+
+    .nav-links > a {
+      display: inline-block;
+      height: 8vh;
+      width: 2vw;
+      position: absolute;
+      margin-left: -1vw;
+      z-index: 1000;
+    }
+
+    .nav-links > a:nth-child(1) {
+      top: 34vh;
+    }
+
+    .nav-links > a:nth-child(2) {
+      top: 42vh;
+    }
+
+    .nav-links > a:nth-child(3) {
+      top: 50vh;
+    }
+
+    .nav-links > a:nth-child(4) {
+      top: 58vh;
+    }
   }
 }

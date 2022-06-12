@@ -50,8 +50,9 @@ const Footer = (props: FooterProps) => {
           <AnimatedButton className="btn btn-next">
             <motion.i
               className="fas fa-chevron-down"
-              initial={{ scale: 0, rotate: 0 }}
-              animate={{ scale: [1, 1.5, 1, 1.5, -1, 1], rotate: [0, 90, -360] }}
+              style={{ display: 'flex' }}
+              initial={{ scale: 0, rotate: 0, y: -100 }}
+              animate={{ scale: [1, 1.5, 1, 1.5, -1, 1], rotate: [0, 90, -360], y: 0 }}
               transition= {{ type: 'spring', stiffness: 250, damping: 25, duration: 1 }}
             ></motion.i>
           </AnimatedButton>

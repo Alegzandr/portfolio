@@ -72,6 +72,10 @@
       height: 2.1em;
     }
 
+    .modals-list > li:last-of-type:before {
+      height: 0;
+    }
+
     .modals-list > li {
       margin-top: 1.5em;
     }
