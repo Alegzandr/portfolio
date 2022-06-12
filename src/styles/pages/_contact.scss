@@ -3,6 +3,10 @@
   flex-direction: row;
   flex-wrap: wrap;
 
+  .avatar {
+    margin-top: 5vh;
+  }
+
   .avatar img {
     border-radius: 50%;
     height: 15vh;
@@ -36,6 +40,10 @@
 
 @media (min-width: 1023px) {
   .contact {
+    .avatar {
+      margin-top: 0;
+    }
+
     .avatar img {
       height: 27vh;
     }
