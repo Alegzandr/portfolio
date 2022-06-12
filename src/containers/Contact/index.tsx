@@ -31,6 +31,8 @@ const Contact = () => {
 
       <section>
         <br />
+        <p>{t('intro')}</p>
+
         <form ref={form} onSubmit={sendEmail}>
           <input type="text" name="user_name" placeholder={`${t('name')}*`} required />
           <input type="email" name="user_email" placeholder={`${t('email')}*`} required />

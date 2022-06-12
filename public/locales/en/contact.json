@@ -1,9 +1,10 @@
 {
- "title": "Contact me",
- "name": "Name",
- "email": "Email",
- "subject": "Subject",
- "message": "Message",
- "send": "Send your message !",
- "download": "Download my resume"
+  "title": "Contact me",
+  "intro": "Do not hesitate to contact me below, I will answer you as soon as possible !",
+  "name": "Name",
+  "email": "Email",
+  "subject": "Subject",
+  "message": "Message",
+  "send": "Send your message !",
+  "download": "Download my resume"
 }
