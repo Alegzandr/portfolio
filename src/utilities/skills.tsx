@@ -17,7 +17,8 @@ const skills = [
   { name: 'NGINX', image: 'nginx.svg', categories:  [ 'DevOps' ]  },
   { name: 'Apache', image: 'apache.svg', categories:  [ 'DevOps' ]  },
   { name: 'Photoshop', image: 'photoshop.svg', categories:  [ 'Creativity' ]  },
-  { name: 'After Effects', image: 'after-effects.svg', categories:  [ 'Creativity' ] }
+  { name: 'After Effects', image: 'after-effects.svg', categories:  [ 'Creativity' ] },
+  { name: 'Firebase', image: 'firebase.svg', categories:  [ 'Back-end' ] }
 ].sort((a,b) => (a.name > b.name) ? 1 : ((b.name > a.name) ? -1 : 0));
 
 const categories: string[] = [];
